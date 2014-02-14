@@ -14,7 +14,7 @@
         <label for="loan-number">Lånernummer / CPR-nummer</label>
         <input type="password" placeholder="Indtast dit lånernummer fra dit lånerkort" id="loan-number" class="form--input">
         <div class="form--toggle-password js-form-toggle-password" data-toggle-password="loan-number">
-          <img src="/images/eye.png" class="form--toggle-password-icon">
+          <img src="/public/eye.png" class="form--toggle-password-icon">
           <span class="js-form-toggle-text">Vis</span>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <label for="pincode">Pinkode</label>
         <input type="password" placeholder="Indtast din pinkode" id="pincode" class="form--input">
         <div class="form--toggle-password js-form-toggle-password" data-toggle-password="pincode">
-          <img src="/images/eye.png" class="form--toggle-password-icon">
+          <img src="/public/eye.png" class="form--toggle-password-icon">
           <span class="js-form-toggle-text">Vis</span>
         </div>
       </div>
