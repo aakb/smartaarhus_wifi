@@ -9,3 +9,4 @@
 %TIDY_PAGEHEAD: <script type="text/javascript" src="/public/hide-password.min.js"></script>
 %TIDY_PAGEHEAD: <script type="text/javascript" src="/public/common.js"></script>
 %TIDY_PAGEHEAD: <script type="text/javascript" src="/public/jquery.cookie.js"></script>
+
