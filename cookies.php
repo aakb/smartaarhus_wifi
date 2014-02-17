@@ -3,13 +3,6 @@
 <head>
   <title>Brug af cookies</title>
   <?php include('inc/meta.inc'); ?>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.js-delete-cookies-link').click(function() {
-        deleteAllCookies($('.js-delete-cookies'));
-      });
-    });
-  </script>
 </head>
 
 <?php include('inc/header.inc'); ?>

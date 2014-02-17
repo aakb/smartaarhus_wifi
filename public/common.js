@@ -110,6 +110,27 @@ function showHidePassword() {
  */
 
 $(document).ready(function() {
+
+  // Handle login-choice
+  if ( $('.js-cookie-message') ) {
+    cookieMessage();
+
+    // Save login choice
+    $('.js-save-login-choice').click(function() {
+      saveLoginChoice();
+    });
+
+    // Delete login choice
+    $('.js-delete-login-choice').click(function() {
+      deleteLoginChoice();
+    });
+  }
+
+  // Handle delete-cookies-link
+  $('.js-delete-cookies-link').click(function() {
+    deleteAllCookies($('.js-delete-cookies'));
+  });
+
   // Show/hide password.
   showHidePassword();
 
