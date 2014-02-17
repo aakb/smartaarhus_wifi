@@ -13,7 +13,7 @@
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
         <label for="smscode">Indtast kode</label>
-        <input type="password" placeholder="Indtast kode fra SMS" id="smscode" name="password" class="form--input" />
+        <input type="password" placeholder="Indtast kode fra SMS" id="smscode" name="password" class="form--input" autocomplete="off" />
         <div class="form--toggle-password js-form-toggle-password" data-toggle-password="password">
           <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>
