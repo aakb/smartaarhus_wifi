@@ -4,6 +4,7 @@
   <title>Medarbejderlogin</title>
   <?php include('inc/meta.inc'); ?>
 </head>
+<body>
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">

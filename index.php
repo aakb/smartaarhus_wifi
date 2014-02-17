@@ -6,7 +6,8 @@
     redirectToLogin();
   </script>
 </head>
-<body class="frontpage">
+
+<body>
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>Vælg login</h1>
