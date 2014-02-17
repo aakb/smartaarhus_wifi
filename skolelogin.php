@@ -14,13 +14,13 @@
       <input type="text" placeholder="Indtast dit brugernavn" id="username" name="username" class="form--input" autocomplete="off">
       <div class="form--password-wrapper">
         <label for="password">Kodeord</label>
-        <input type="password" placeholder="Indtast dit kodeord" id="password" name="password" class="form--input">
+        <input type="password" placeholder="Indtast dit kodeord" id="password" name="password" class="form--input" />
         <div class="form--toggle-password js-form-toggle-password" data-toggle-password="password">
-          <img src="/public/eye.png" class="form--toggle-password-icon">
+          <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>
         </div>
       </div>
-      <input type="submit" class="button" value="Log ind">
+      <input type="submit" class="button" value="Log ind" />
     </form>
   </div>
   <?php include('inc/footer.inc'); ?>
