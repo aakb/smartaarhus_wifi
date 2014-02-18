@@ -1,37 +1,17 @@
 %TIDY_DEP[debug] <!-- $Id: auth_methods_da.txt $ -->
 %TIDY_DEP[debug] <!-- Template version 2.4.21 -->
-%TIDY[include(header_inc.txt)]
 
-<div class="methods">
-<div class="wrapper">
+%TIDY[include(header_meta.txt)]
 
-%TIDY[include(header_menu_da.txt)]
-
-  <div class="content-wrapper">
-    <div class="content">
-      <h1 class="page-title">V&aelig;lg netv&aelig;rksadgangsmetode</h1>
-
-      <p>V&aelig;lg ønsket autentificeringsmetode.</p>
-
-      <div class="form-wrapper">
-
-        <div class="form-item submit">
-%TIDY_IFDEF[auth_nwa_link]    <label><a href="%TIDY[auth_nwa_link]"   >G&aelig;stelogin</a></label>
-%TIDY_IFDEF[auth_nemid_link]  <label><a href="%TIDY[auth_nemid_link]" >NemID</a></label>
-%TIDY_IFDEF[auth_sms_link]    <label><a href="%TIDY[auth_sms_link]"   >SMS</a></label>
-%TIDY_IFDEF[auth_axiell_link] <label><a href="%TIDY[auth_axiell_link]">Bibliotekslogin</a></label>
-%TIDY_IFDEF[auth_ads_link]    <label><a href="%TIDY[auth_ads_link]"   >Medarbejderlogin</a></label>
-%TIDY_IFDEF[auth_ldap_link]   <label><a href="%TIDY[auth_ldap_link]"  >LDAP</a></label>
-%TIDY_IFDEF[auth_radius_link] <label><a href="%TIDY[auth_radius_link]">Skolelogin</a></label>
-%TIDY_IFDEF[auth_direct_link] <label><a href="%TIDY[auth_direct_link]">Direct</a></label>
-%TIDY_IFDEF[auth_smspay_link] <label><a href="%TIDY[auth_smspay_link]">SMS Pay</a></label>
-%TIDY_IFDEF[auth_mssql_link]  <label><a href="%TIDY[auth_mssql_link]" >MS-SQL</a></label>
-%TIDY_IFDEF[auth_custom_link] <label><a href="%TIDY[auth_custom_link]">Tilpasset</a></label>
-	</div>
-
-      </div>
-    </div>
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Vælg login</h1>
+  <div class="link-button--wrapper">
+%TIDY_IFDEF[auth_axiell_link]  <a href="%TIDY[auth_axiell_link]" class="link-button">Bibliotekslogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
+%TIDY_IFDEF[auth_radius_link]  <a href="%TIDY[auth_radius_link]" class="link-button">Skolelogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
+%TIDY_IFDEF[auth_nwa_link]  <a href="%TIDY[auth_nwa_link]" class="link-button">Medarbejderlogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
+%TIDY_IFDEF[auth_sms_link]  <a href="%TIDY[auth_sms_link]" class="link-button">SMS login<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
   </div>
+  %TIDY[include(footer.txt)]
+</div>
 
-</div>
-</div>
