@@ -9,7 +9,7 @@
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>SMS login</h1>
-  <div class="message--success">Vi har sendt en kode til det indtastede nummer, indtast den i <label for="smscode">"Indtast kode" feltet</label> nedenfor</div>
+  <p class="page-content">Indtast dit mobilnummer og du vil herefter modtage en SMS, der indeholder en engangskode.</p>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="mobilnumber">Mobilnummer</label>    
