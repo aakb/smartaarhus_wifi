@@ -76,8 +76,6 @@ function cookieMessage() {
   });
 }
 
-
-
 /**
  * Function for show/hide password in input fields
  */
@@ -86,21 +84,17 @@ function showHidePassword() {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
 
-  var togglePassword = $('.js-form-toggle-password');
-  var togglePasswordText = $('.js-form-toggle-text', togglePassword);
-  var passwordInput = $('#' + togglePassword.attr('data-toggle-password'));
-
-  togglePassword.click(function() {
+  $('.js-form-toggle-password').click(function() {
     // Get element from data attribute and attach togglePassword function.
-    passwordInput.togglePassword();
+    $('#' + $(this).attr('data-toggle-password')).togglePassword();
   });
 
   // Change text.
-  $(passwordInput).on('passwordShown', function () {
-    togglePasswordText.text('Skjul');
+  $('.form--input').on('passwordShown', function () {
+    $('.js-form-toggle-text', $(this).parent()).text('Skjul')
 
   }).on('passwordHidden', function () {
-    togglePasswordText.text('Vis');
+    $('.js-form-toggle-text', $(this).parent()).text('Vis')
   });
 }
 
