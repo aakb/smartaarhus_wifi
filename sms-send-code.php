@@ -14,7 +14,7 @@
     <form action="sms-login.php" method="post">
       <label for="mobilnumber">Mobilnummer</label>
       <input type="number" placeholder="Indtast dit mobilnummer" id="mobilnumber" name="username" class="form--input" autocomplete="off" />
-      <input type="submit" class="button" value="Send kode" />
+      <input type="submit" class="button" value="Send SMS" />
     </form>
   </div>
   <?php include('inc/footer.inc'); ?>
