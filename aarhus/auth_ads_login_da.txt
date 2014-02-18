@@ -13,7 +13,7 @@
     <a href="#" class="js-hide-message">Vis ikke denne besked igen</a>
   </div>
   <div class="form--wrapper">
-    <form action="logged-in.php" method="post">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
       <label for="username">AZ-ident</label>
       <input type="text" placeholder="Indtast dit brugernavn" id="username" name="username" class="form--input" autocomplete="off" />
       <div class="form--password-wrapper">
