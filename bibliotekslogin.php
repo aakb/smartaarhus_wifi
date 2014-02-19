@@ -12,17 +12,17 @@
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
-        <label for="loan-number">Lånernummer / CPR-nummer</label>
-        <input type="password" placeholder="Indtast dit lånernummer fra dit lånerkort" id="loan-number" name="username" class="form--input" autocomplete="off" />
-        <div class="form--toggle-password js-form-toggle-password" data-toggle-password="loan-number">
+        <label for="username">Lånernummer / CPR-nummer</label>
+        <input type="password" placeholder="Indtast dit lånernummer fra dit lånerkort" id="username" name="username" class="form--input" autocomplete="off" />
+        <div class="form--toggle-password js-form-toggle-password" data-toggle-password="username">
           <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>
         </div>
       </div>
       <div class="form--password-wrapper">
-        <label for="pincode">Pinkode</label>
-        <input type="password" placeholder="Indtast din pinkode" id="pincode" name="password" class="form--input" autocomplete="off" />
-        <div class="form--toggle-password js-form-toggle-password" data-toggle-password="pincode">
+        <label for="password">Pinkode</label>
+        <input type="password" placeholder="Indtast din pinkode" id="password" name="password" class="form--input" autocomplete="off" />
+        <div class="form--toggle-password js-form-toggle-password" data-toggle-password="password">
           <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>
         </div>
