@@ -2,12 +2,10 @@
 <head>
   <title>SmartAarhus WIFI</title>
   <?php include('inc/meta.inc'); ?>
-  <script>
-    redirectToLogin();
-  </script>
 </head>
 
 <body>
+<script>redirectToLogin();</script>
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>Vælg login</h1>
