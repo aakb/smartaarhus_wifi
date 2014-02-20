@@ -42,11 +42,11 @@ function deleteLoginChoice() {
 }
 
 // Delete all cookies choice.
-function deleteAllCookies(message) {
+function deleteAllCookies(messageObj) {
   $.removeCookie('cookie_redirect', { path: '/' });    
   $.removeCookie('cookie_hide_message', { path: '/' });    
 
-  message.text('Cookies blev slettet');
+  if(messageObj) messageObj.text('Cookies blev slettet');
 }
 
 // Show a message if the user is redirected
