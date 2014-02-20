@@ -8,7 +8,7 @@
 // Redirect to login choice.
 function redirectToLogin() {
   if ($.cookie('cookie_redirect') != undefined) {
-    window.location.replace($.cookie('cookie_redirect'));
+    window.location.replace($.cookie('cookie_redirect') + window.location.search);
   }
 }
 
