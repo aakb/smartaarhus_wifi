@@ -21,10 +21,6 @@ function checkLoginSaved() {
     savedLoginLink.hide();
   }
 
-  savedLoginLink.click(function() {
-    deleteAllCookies();
-    return false;
-  });
 }
 
 // Save login choice.
@@ -107,6 +103,12 @@ function showHidePassword() {
 
 $(document).ready(function() {
 
+  // Show/hide password.
+  showHidePassword();
+
+  // Check if the user has saved login
+  checkLoginSaved();
+  
   // Handle login-choice
   if ( $('.js-cookie-message') ) {
     cookieMessage();
@@ -123,16 +125,16 @@ $(document).ready(function() {
       return false;      
     });
   }
-
+ 
   // Handle delete-cookies-link
   $('.js-delete-cookies-link').click(function() {
     deleteAllCookies($('.js-delete-cookies'));
     return false;    
   });
 
-  // Show/hide password.
-  showHidePassword();
-
-  // Check if the user has saved login
-  checkLoginSaved();
+  $('.js-footer-saved-login').click(function() {
+    deleteAllCookies();
+    return false;
+  });  
+  
 });
