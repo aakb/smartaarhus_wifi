@@ -28,22 +28,22 @@ function checkLoginSaved() {
 
 // Save login choice.
 function saveLoginChoice() {
-  $.cookie('cookie_redirect', window.location.pathname, { expires: 30 });
+  $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
   $('.js-cookie-message-saved').text('Dit loginvalg er gemt');
 }
 
 // Delete login choice.
 function deleteLoginChoice() {
-  $.cookie('cookie_redirect', '', { expires: -1 });
+  $.cookie('cookie_redirect', '', { expires: -1, path: '/' });
 
   $('.js-cookie-message-not-saved').text('Dit loginvalg er slettet');
 }
 
 // Delete all cookies choice.
 function deleteAllCookies(message) {
-  $.cookie('cookie_redirect', '', { expires: -1 });
-  $.cookie('cookie_hide_message', '', { expires: -1 });
+  $.cookie('cookie_redirect', '', { expires: -1, path: '/' });
+  $.cookie('cookie_hide_message', '', { expires: -1, path: '/' });
 
   message.text('Cookies blev slettet');
 }
@@ -70,7 +70,7 @@ function cookieMessage() {
 
   // Attach hide message function to link
   $('.js-hide-message').click(function() {
-    $.cookie('cookie_hide_message', 1, { expires: 30 });
+    $.cookie('cookie_hide_message', 1, { expires: 30, path: '/' });
 
     cookieMessage.hide();
   });
