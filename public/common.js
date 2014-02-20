@@ -23,6 +23,7 @@ function checkLoginSaved() {
 
   savedLoginLink.click(function() {
     deleteAllCookies();
+    return false;
   });
 }
 
@@ -73,6 +74,7 @@ function cookieMessage() {
     $.cookie('cookie_hide_message', 1, { expires: 30, path: '/' });
 
     cookieMessage.hide();
+    return false;
   });
 }
 
@@ -112,17 +114,20 @@ $(document).ready(function() {
     // Save login choice
     $('.js-save-login-choice').click(function() {
       saveLoginChoice();
+      return false;
     });
 
     // Delete login choice
     $('.js-delete-login-choice').click(function() {
       deleteLoginChoice();
+      return false;      
     });
   }
 
   // Handle delete-cookies-link
   $('.js-delete-cookies-link').click(function() {
     deleteAllCookies($('.js-delete-cookies'));
+    return false;    
   });
 
   // Show/hide password.
