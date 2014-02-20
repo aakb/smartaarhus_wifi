@@ -35,15 +35,15 @@ function saveLoginChoice() {
 
 // Delete login choice.
 function deleteLoginChoice() {
-  $.cookie('cookie_redirect', '', { expires: -1, path: '/' });
+  $.removeCookie('cookie_redirect', { path: '/' });  
 
   $('.js-cookie-message-not-saved').text('Dit loginvalg er slettet');
 }
 
 // Delete all cookies choice.
 function deleteAllCookies(message) {
-  $.cookie('cookie_redirect', '', { expires: -1, path: '/' });
-  $.cookie('cookie_hide_message', '', { expires: -1, path: '/' });
+  $.removeCookie('cookie_redirect', { path: '/' });    
+  $.removeCookie('cookie_hide_message', { path: '/' });    
 
   message.text('Cookies blev slettet');
 }
