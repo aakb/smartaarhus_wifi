@@ -32,15 +32,15 @@ function saveLoginChoice() {
 
 // Delete login choice.
 function deleteLoginChoice() {
-  $.removeCookie('cookie_redirect', { path: '/' });  
+  $.removeCookie('cookie_redirect', { path: '/' });
 
   $('.js-cookie-message-not-saved').text('Dit loginvalg er slettet');
 }
 
 // Delete all cookies choice.
 function deleteAllCookies(messageObj) {
-  $.removeCookie('cookie_redirect', { path: '/' });    
-  $.removeCookie('cookie_hide_message', { path: '/' });    
+  $.removeCookie('cookie_redirect', { path: '/' });
+  $.removeCookie('cookie_hide_message', { path: '/' });
 
   if(messageObj) messageObj.text('Cookies blev slettet');
 }
@@ -82,18 +82,39 @@ function showHidePassword() {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
 
-  $('.js-form-toggle-password').click(function() {
-    // Get element from data attribute and attach togglePassword function.
-    $('#' + $(this).attr('data-toggle-password')).togglePassword();
-  });
+  // $('.js-form-toggle-password').click(function() {
+    // // Get element from data attribute and attach togglePassword function.
+    // $('#' + $(this).attr('data-toggle-password')).togglePassword();
+  // });
 
-  // Change text.
-  $('.form--input').on('passwordShown', function () {
-    $('.js-form-toggle-text', $(this).parent()).text('Skjul')
+  // // Change text.
+  // $('.form--input').on('passwordShown', function () {
+    // $('.js-form-toggle-text', $(this).parent()).text('Skjul')
 
-  }).on('passwordHidden', function () {
-    $('.js-form-toggle-text', $(this).parent()).text('Vis')
-  });
+  // }).on('passwordHidden', function () {
+    // $('.js-form-toggle-text', $(this).parent()).text('Vis')
+  // });
+
+  var options = {
+    show: 'infer',
+    innerToggle: true,
+    toggleClass: 'hideShowPassword-toggle',
+    states: {
+
+       shown: {
+          // Text of the toggle element.
+          toggleText: 'Skjul'
+        },
+
+        hidden: {
+          toggleText: 'Vis'
+        }
+    }
+
+  }
+  $('#username').hideShowPassword(options);
+  $('#password').hideShowPassword(options);
+
 }
 
 
@@ -108,7 +129,7 @@ $(document).ready(function() {
 
   // Check if the user has saved login
   checkLoginSaved();
-  
+
   // Handle login-choice
   if ( $('.js-cookie-message') ) {
     cookieMessage();
@@ -122,19 +143,19 @@ $(document).ready(function() {
     // Delete login choice
     $('.js-delete-login-choice').click(function() {
       deleteLoginChoice();
-      return false;      
+      return false;
     });
   }
- 
+
   // Handle delete-cookies-link
   $('.js-delete-cookies-link').click(function() {
     deleteAllCookies($('.js-delete-cookies'));
-    return false;    
+    return false;
   });
 
   $('.js-footer-saved-login').click(function() {
     deleteAllCookies();
     return false;
-  });  
-  
+  });
+
 });
