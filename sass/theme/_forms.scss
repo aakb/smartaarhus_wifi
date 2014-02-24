@@ -31,19 +31,15 @@
   // Override inline styling.
   right: 1em !important;
 
-  // Override inline styling.
-  margin-top: 0 !important;
+  min-height: 1.25em;
+  padding-left: 2.75em;
 
+  background: $white url('/public/eye.png') no-repeat 0.5em .21em;
   color: $gray;
   cursor: pointer;
   font-size: 75%;
-}
 
-.form--toggle-password-icon {
-  left: -1.75em;
-  max-width: 1.25em;
-  position: absolute;
-  top: 0.3em;
+  @include background-size(1.5em);
 }
 
 .form--new-code {

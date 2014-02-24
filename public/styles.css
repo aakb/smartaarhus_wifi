@@ -335,21 +335,19 @@
 .form--toggle-password {
   position: absolute;
   right: 1em !important;
-  margin-top: 0 !important;
+  min-height: 1.25em;
+  padding-left: 2.75em;
+  background: white url("/public/eye.png") no-repeat 0.5em 0.21em;
   color: #999999;
   cursor: pointer;
   font-size: 75%;
+  -webkit-background-size: 1.5em;
+  -moz-background-size: 1.5em;
+  -o-background-size: 1.5em;
+  background-size: 1.5em;
 }
 
-/* line 42, ../sass/theme/_forms.scss */
-.form--toggle-password-icon {
-  left: -1.75em;
-  max-width: 1.25em;
-  position: absolute;
-  top: 0.3em;
-}
-
-/* line 49, ../sass/theme/_forms.scss */
+/* line 45, ../sass/theme/_forms.scss */
 .form--new-code {
   padding-top: 2em;
   text-align: center;
