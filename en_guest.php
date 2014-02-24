@@ -8,7 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>G&aelig;stelogin</h1>
+  <h1>G&aelig;stelogin - english version</h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">

@@ -8,7 +8,7 @@
 %TIDY[nemid_javascript]
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Adgang med Nemid</h1>
+  <h1>Adgang med Nemid - english version</h1>
   <p>Log ind med dit NemID.</p>
   <div class="form--wrapper">
         <form name="logonForm" action="%TIDY[form_action]" method="post">

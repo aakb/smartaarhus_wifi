@@ -8,7 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>SMS login</h1>
+  <h1>SMS login - english version</h1>
   <p class="page-content">Indtast dit mobilnummer og du vil herefter modtage en SMS, der indeholder en engangskode.</p>
   <div class="form--wrapper">
     <form action="sms-login.php" method="post">

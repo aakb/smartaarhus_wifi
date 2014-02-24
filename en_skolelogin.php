@@ -8,7 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Skolelogin</h1>
+  <h1>Skolelogin - english version</h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">Brugernavn</label>
