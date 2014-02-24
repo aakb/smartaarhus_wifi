@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nemid</title>
+  <title>Nemid - english version</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>
 %TIDY[nemid_javascript]
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Adgang med Nemid - english version</h1>
-  <p>Log ind med dit NemID.</p>
+  <h1>Nemid</h1>
+
   <div class="form--wrapper">
         <form name="logonForm" action="%TIDY[form_action]" method="post">
 %TIDY[form_intercept]

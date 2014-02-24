@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Brug af cookies</title>
+  <title>Brug af cookies - english version</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Fejl - english version</h1>
+  <h1>Error</h1>
   <div class="page-content">
   
       <p class="error">%TIDY[error_message]&nbsp;</p>

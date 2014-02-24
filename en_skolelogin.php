@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Skolelogin</title>
+  <title>Skolelogin - english version</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Skolelogin - english version</h1>
+  <h1>School login</h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
-      <label for="username">Brugernavn</label>
-      <input type="text" placeholder="Indtast dit brugernavn" id="username" name="username" class="form--input" autocomplete="off" />
+      <label for="username">Username</label>
+      <input type="text" placeholder="Enter username" id="username" name="username" class="form--input" autocomplete="off" />
       <div class="form--password-wrapper">
-        <label for="password">Kodeord</label>
-        <input type="password" placeholder="Indtast dit kodeord" id="password" name="password" class="form--input" autocomplete="off" />
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" id="password" name="password" class="form--input" autocomplete="off" />
         <div class="form--toggle-password js-form-toggle-password" data-toggle-password="password">
           <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>

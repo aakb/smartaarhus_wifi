@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Logget ind</title>
+  <title>Logget ind - english version</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Din adgang er nu tilladt - english version</h1>
+  <h1>Your access has now been activated</h1>
   
-      <p><b>Du har adgang til internettet</b><br />
-	  Denne session udl&oslash;ber %TIDY[expire_time], herefter vil du igen blive bedt om autentificering. Er dit behov for adgang til internettet kortere end denne sessions varighed, bedes du logge af efter brug.<br />
-      <i>&raquo;&nbsp;<a href="%TIDY[path_auth]/action/logout">Tryk her for at logge af netv&aelig;rket</a></i><br /><br /></p>
-		
+      <p><b>You are connected to the Internet</b><br />
+      This session expires %TIDY[expire_time], after that time you will be asked to re-authenticate. If your need for an Internet connection is shorter than this session, please log off after use.<br />
+      <i>&raquo;&nbsp;<a href="%TIDY[path_auth]/action/logout">Click here to log off the network</a></i><br /><br /></p>
+      
 %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      <p>
-%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      <b>Du vil blive videresendt</b><br />
-%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      Du bliver om 5 sekunder videresendt til din destination.<br />
+%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      <b>You will be forwarded</b><br />
+%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      You will be forwarded to your original destination in five seconds.<br />
 %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      <i>&raquo;&nbsp;<a href="%TIDY[intercept_uri]">%TIDY[intercept_uri_nice]</a></i><br /><br />
 %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]      </p>
 
-      <p><b>Hj&aelig;lp</b><br />
-      Vi kan ikke tilbyde hj&aelig;lp vedr&oslash;rende ops&aelig;tning og betjeningen af dit udstyr.<br /><br /></p>
+      <p><b>Support</b><br />
+      We do not offer any support on your computer.<br /><br /></p>
 
-      <p><b>Sikkerhed p&aring; nettet</b><br />
-      Du skal vide, at du er p&aring; et &aring;bent netv&aelig;rk - dit udstyr kan ses og tilg&aring;s af andre p&aring; hotspottet, og at du selv har ansvaret for at f&aring; beskyttet dit udstyr forskriftsm&aelig;ssigt (lokal Firewall m.v.)<br />
-      <br />
-      Vi g&oslash;r opm&aelig;rksom p&aring;, at din f&aelig;rden p&aring; internettet vil kunne spores tilbage til dig. Efter anmodning fra berettiget myndighed skal vi udlevere oplysning herom.</p>
+      <p><b>Security on the network</b><br />
+      Please read this before you start using the wireless network This is an open network - It is possible for others to see and access your equipment on this Hotspot. <br />It is solely your own responsibility to have a firewall on your computer.<br /><br /> Please note that your activities on this network will be logged. At the request of a proper authority, we must disclose this log.<br /></p>
 
       <div class="form-wrapper">
         <div class="form-item submit">
-          <input type="button" value="Log af" id="submit" onclick="location.href='%TIDY[path_auth]/action/logout';" />
+          <input type="button" value="Log off" id="submit" onclick="location.href='%TIDY[path_auth]/action/logout';" />
         </div>
       </div>  
   
 </div>
 </body>
 </html>
+
