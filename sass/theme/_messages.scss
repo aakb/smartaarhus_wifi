@@ -5,12 +5,39 @@
  */
 
 
+%message-green {
+  background-color: $green;
+  color: darken($green, 50%);
+}
+
+%message-red {
+  background-color: $red;
+  color: darken($red, 40%);
+
+  a:link {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: darken($white, 5%);
+  }
+
+  a:hover,
+  a:focus {
+    color: darken($white, 10%);
+    text-decoration: none;
+  }
+}
+
+%message-yellow {
+  background-color: $yellow;
+  color: darken($yellow, 40%);
+}
+
 .message {
   margin-bottom: 2em;
   padding: 1em 1.5em;
-
-  background-color: $green;
-  color: darken($green, 50%);
 
   @include border-radius($border-radius);
 
@@ -27,6 +54,17 @@
 }
 
 .message--success {
+  @extend %message-green;
+  @extend .message;
+}
+
+.message--warning {
+  @extend %message-yellow;
+  @extend .message;
+}
+
+.message--error {
+  @extend %message-red;
   @extend .message;
 }
 
