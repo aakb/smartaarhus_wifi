@@ -13,7 +13,7 @@
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
         <label for="username">Lånerkortnummer / CPR-nummer</label>
-        <input type="password" placeholder="Indtast dit lånerkortnummer eller CPR-nummer" id="username" name="username" class="form--input" autocomplete="off" />
+        <input type="password" placeholder="Indtast dit lånerkort- eller CPR-nummer" id="username" name="username" class="form--input" autocomplete="off" />
         <!--<div class="form--toggle-password js-form-toggle-password" data-toggle-password="username">
           <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>
