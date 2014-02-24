@@ -29,14 +29,10 @@
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">AZ-ident</label>
-      <input type="text" placeholder="Indtast dit AZ-ident" id="username" name="username" class="form--input" autocomplete="off" />
+      <input type="text" placeholder="Indtast dit AZ-ident" id="username" name="username" class="form--input" autocomplete="off" required />
       <div class="form--password-wrapper">
         <label for="password">Kodeord</label>
-        <input type="password" placeholder="Indtast dit kodeord" id="password" name="password" class="form--input" autocomplete="off" />
-        <div class="form--toggle-password js-form-toggle-password" data-toggle-password="password">
-          <img src="/public/eye.png" class="form--toggle-password-icon" />
-          <span class="js-form-toggle-text">Vis</span>
-        </div>
+        <input type="password" placeholder="Indtast dit kodeord" id="password" name="password" class="form--input" autocomplete="off" required />
       </div>
       <input type="submit" class="button" value="Log ind" />
     </form>
