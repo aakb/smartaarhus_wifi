@@ -373,34 +373,65 @@
  *
  */
 /* line 8, ../sass/theme/_messages.scss */
-.message, .message--success, .message--cookie {
-  margin-bottom: 2em;
-  padding: 1em 1.5em;
+.message--success {
   background-color: #b9ff73;
   color: #3a7300;
+}
+
+/* line 13, ../sass/theme/_messages.scss */
+.message--error {
+  background-color: #ff6138;
+  color: #6b1600;
+}
+/* line 17, ../sass/theme/_messages.scss */
+.message--error a:link {
+  color: white;
+  text-decoration: underline;
+}
+/* line 22, ../sass/theme/_messages.scss */
+.message--error a:visited {
+  color: #f2f2f2;
+}
+/* line 27, ../sass/theme/_messages.scss */
+.message--error a:hover,
+.message--error a:focus {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+
+/* line 33, ../sass/theme/_messages.scss */
+.message--warning {
+  background-color: #f8b634;
+  color: #5d3f03;
+}
+
+/* line 38, ../sass/theme/_messages.scss */
+.message, .message--success, .message--warning, .message--error, .message--cookie {
+  margin-bottom: 2em;
+  padding: 1em 1.5em;
   -webkit-border-radius: 0.6em;
   -moz-border-radius: 0.6em;
   -ms-border-radius: 0.6em;
   -o-border-radius: 0.6em;
   border-radius: 0.6em;
 }
-/* line 17, ../sass/theme/_messages.scss */
-.message label, .message--success label, .message--cookie label {
+/* line 44, ../sass/theme/_messages.scss */
+.message label, .message--success label, .message--warning label, .message--error label, .message--cookie label {
   display: inline;
   margin: 0;
   font-weight: bold;
 }
-/* line 24, ../sass/theme/_messages.scss */
-.message p:last-child, .message--success p:last-child, .message--cookie p:last-child {
+/* line 51, ../sass/theme/_messages.scss */
+.message p:last-child, .message--success p:last-child, .message--warning p:last-child, .message--error p:last-child, .message--cookie p:last-child {
   margin-bottom: 0;
 }
 
-/* line 33, ../sass/theme/_messages.scss */
+/* line 71, ../sass/theme/_messages.scss */
 .message--cookie {
   display: none;
 }
 
-/* line 40, ../sass/theme/_messages.scss */
+/* line 78, ../sass/theme/_messages.scss */
 .message--cookie-saved,
 .message--cookie-not-saved {
   display: none;
