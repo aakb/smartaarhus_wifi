@@ -100,7 +100,17 @@
 }
 
 
-/* Logos */
+/* Logos and back link */
+
+.front {
+  .logo--wrapper {
+    left: 0;
+  }
+
+  .back-link--wrapper {
+    display: none;
+  }
+}
 
 .back-link--wrapper,
 .logo--wrapper,

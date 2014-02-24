@@ -172,8 +172,17 @@
   position: relative;
 }
 
-/* Logos */
-/* line 107, ../sass/theme/_layout.scss */
+/* Logos and back link */
+/* line 106, ../sass/theme/_layout.scss */
+.front .logo--wrapper {
+  left: 0;
+}
+/* line 110, ../sass/theme/_layout.scss */
+.front .back-link--wrapper {
+  display: none;
+}
+
+/* line 117, ../sass/theme/_layout.scss */
 .back-link--wrapper,
 .logo--wrapper,
 .aak-logo--wrapper {
@@ -181,17 +190,17 @@
   height: 3em;
 }
 
-/* line 113, ../sass/theme/_layout.scss */
+/* line 123, ../sass/theme/_layout.scss */
 .logo--wrapper {
   left: 2em;
 }
 
-/* line 117, ../sass/theme/_layout.scss */
+/* line 127, ../sass/theme/_layout.scss */
 .aak-logo--wrapper {
   right: 0;
 }
 
-/* line 123, ../sass/theme/_layout.scss */
+/* line 133, ../sass/theme/_layout.scss */
 .back-link,
 .logo,
 .aak-logo {
@@ -205,34 +214,34 @@
   transform: translateY(-50%);
 }
 
-/* line 127, ../sass/theme/_layout.scss */
+/* line 137, ../sass/theme/_layout.scss */
 .logo {
   display: inline-block;
   max-width: 10em;
 }
 
-/* line 132, ../sass/theme/_layout.scss */
+/* line 142, ../sass/theme/_layout.scss */
 .aak-logo {
   max-width: 4em;
 }
 
-/* line 136, ../sass/theme/_layout.scss */
+/* line 146, ../sass/theme/_layout.scss */
 .back-link {
   display: block;
   max-width: 1em;
 }
 
-/* line 142, ../sass/theme/_layout.scss */
+/* line 152, ../sass/theme/_layout.scss */
 .frontpage .back-link {
   display: none;
 }
-/* line 146, ../sass/theme/_layout.scss */
+/* line 156, ../sass/theme/_layout.scss */
 .frontpage .logo--wrapper {
   left: 0;
 }
 
 /* Layout */
-/* line 154, ../sass/theme/_layout.scss */
+/* line 164, ../sass/theme/_layout.scss */
 .layout {
   padding-right: 2em;
   padding-bottom: 3em;
@@ -240,18 +249,18 @@
 }
 
 /* Footer */
-/* line 165, ../sass/theme/_layout.scss */
+/* line 175, ../sass/theme/_layout.scss */
 .footer {
   text-align: center;
 }
 
-/* line 169, ../sass/theme/_layout.scss */
+/* line 179, ../sass/theme/_layout.scss */
 .footer--saved-login {
   display: none;
   margin-left: 1em;
 }
 
-/* line 174, ../sass/theme/_layout.scss */
+/* line 184, ../sass/theme/_layout.scss */
 .footer--language {
   margin-left: 1em;
 }
