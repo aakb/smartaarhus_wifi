@@ -16,10 +16,6 @@
       <div class="form--password-wrapper">
         <label for="password">Password</label>
         <input type="password" placeholder="Enter password" id="password" name="password" class="form--input" autocomplete="off" required />
-        <div class="form--toggle-password js-form-toggle-password" data-toggle-password="password">
-          <img src="/public/eye.png" class="form--toggle-password-icon" />
-          <span class="js-form-toggle-text">Vis</span>
-        </div>
       </div>
       <input type="submit" class="button" value="Log ind" />
     </form>
