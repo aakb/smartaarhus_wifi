@@ -28,8 +28,11 @@
 
 .form--toggle-password {
   position: absolute;
-  right: 1em;
-  bottom: 1.1em;
+  // Override inline styling.
+  right: 1em !important;
+
+  // Override inline styling.
+  margin-top: 0 !important;
 
   color: $gray;
   cursor: pointer;

@@ -98,7 +98,7 @@ function showHidePassword() {
   var options = {
     show: 'infer',
     innerToggle: true,
-    toggleClass: 'hideShowPassword-toggle',
+    toggleClass: 'form--toggle-password',
     states: {
 
        shown: {
