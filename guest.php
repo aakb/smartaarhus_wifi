@@ -9,11 +9,12 @@
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>G&aelig;stelogin</h1>
+  <p class="page-content">Gæstelogin udleveres ved skranken/receptionen.</p>    
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
         <label for="username">Brugernavn</label>
-        <input type="password" placeholder="Indtast dit" id="username" name="username" class="form--input" autocomplete="off" />
+        <input type="password" placeholder="Indtast dit udleverede brugernavn" id="username" name="username" class="form--input" autocomplete="off" />
         <div class="form--toggle-password js-form-toggle-password" data-toggle-password="username">
           <img src="/public/eye.png" class="form--toggle-password-icon" />
           <span class="js-form-toggle-text">Vis</span>
