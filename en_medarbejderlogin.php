@@ -29,7 +29,7 @@
       <input type="submit" class="button" value="Log ind" />
     </form>
   </div>
-  <?php include('inc/footer.inc'); ?>
+  <?php include('inc/en_footer.inc'); ?>
 </div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Fejl</h1>
+  <h1>Fejl - english version</h1>
   <div class="page-content">
   
       <p class="error">%TIDY[error_message]&nbsp;</p>
@@ -19,7 +19,7 @@
       </div>    
     
   </div>
-  <?php include('inc/footer.inc'); ?>
+  <?php include('inc/en_footer.inc'); ?>
 </div>
 </body>
 </html>

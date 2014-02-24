@@ -17,7 +17,7 @@
       <input type="submit" class="button" value="Send SMS" />
     </form>
   </div>
-  <?php include('inc/footer.inc'); ?>
+  <?php include('inc/en_footer.inc'); ?>
 </div>
 </body>
 </html>

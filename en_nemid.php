@@ -17,7 +17,7 @@
 %TIDY[nemid_applet]
   	</form>
   </div>
-  <?php include('inc/footer.inc'); ?>
+  <?php include('inc/en_footer.inc'); ?>
 </div>
 </body>
 </html>

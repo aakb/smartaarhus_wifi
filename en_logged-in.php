@@ -8,7 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Din adgang er nu tilladt</h1>
+  <h1>Din adgang er nu tilladt - english version</h1>
   
       <p><b>Du har adgang til internettet</b><br />
 	  Denne session udl&oslash;ber %TIDY[expire_time], herefter vil du igen blive bedt om autentificering. Er dit behov for adgang til internettet kortere end denne sessions varighed, bedes du logge af efter brug.<br />
