@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="da">
+<head><meta charset="utf-8" />
+<meta name="dcterms.rightsHolder" content="(c) Netic A/S" />
+<title>Netic Hotspot Solution (NHS v2.4.22) - Netic A/S</title>
+<script type="text/javascript">
+/* <![CDATA[ */
+function set_language(lang) {
+  document.cookie = 'tidyLanguage' + '=' + escape(lang) + '; path=/';
+  window.location.reload(true);
+}
+/* ]]> */
+</script>
+
+<!-- Netic Hotspot Solution -->
+<!-- Copyright &copy; Netic A/S -->
+<!-- site="23:aarhus" template="aarhus" lang="da" addr="193.33.148.5" -->
+<!-- modules="nemid,nwa,ads,axiell,sms,radius" router="" -->
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="/public/styles.css"/>
+<script type="text/javascript" src="/public/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/public/hide-password.min.js"></script>
+<script type="text/javascript" src="/public/jquery.cookie.js"></script>
+<script type="text/javascript" src="/public/jquery.h5validate.js"></script>
+<script type="text/javascript" src="/public/html5shiv.js"></script>
+<script type="text/javascript" src="/public/common.js"></script>
+<script type="text/javascript">
+// handle smartlogin (ajaxlogin via http://nwa-demo.netic.dk/auth/=/logon/ads ).
+$(document).ready(function() {
+
+
+});
+</script>
+
+
+<!-- file="auth_ads_login_da" -->
+</head>
+<body class="aarhus">
+<div class="main_wrapper">
+<!-- system header end -->
+
+
+
+
+
+
+
+<header class="header" role="banner">
+  <div class="header--inner">
+    <a href="/" class="back-link--wrapper js-toplink"><img src="/public/arrow-left.png" class="back-link"/></a>
+    <a href="/" class="logo--wrapper js-toplink"><img src="/public/logo.png" class="logo"/></a>
+    <span class="aak-logo--wrapper"><img src="/public/aak-logo.png" class="aak-logo"/></span>
+  </div>
+</header>
+
+<div class="layout">
+  <h1>Medarbejderlogin</h1>
+  <div class="message--success js-message">
+    <p>Dette er en succes.</p>
+    <p><a href="#">Dette er et link</a></p>
+  </div>
+  <div class="message--warning js-message">
+    <p>Dette er en advarsel.</p>
+    <p><a href="#">Dette er et link</a></p>
+  </div>
+  <div class="message--error js-message">
+    <p>Dette er en fejl.</p>
+    <p><a href="#">Dette er et link</a></p>
+  </div>
+  <div class="message--cookie js-cookie-message">
+    <p class="message--cookie-saved js-cookie-message-saved">Vil du viderestilles til dette login næste gang du skal logge ind? <a href="#" class="js-save-login-choice">Ja tak, gem mit loginvalg</a></p>
+    <p class="message--cookie-not-saved js-cookie-message-not-saved">Du har gemt dette som dit loginvalg. <a href="#" class="js-delete-login-choice">Slet loginvalg</a></p>
+    <a href="#" class="js-hide-message">Vis ikke denne besked igen</a>
+  </div>
+  <div class="form--wrapper">
+    <form action="/auth/action/ads" method="post"><input type="hidden" name="intercept_uri" value="" />
+      <label for="username">AZ-ident</label>
+      <input type="text" placeholder="Indtast dit AZ-ident" id="username" name="username" class="form--input" autocomplete="off" required>
+      <div class="form--password-wrapper">
+        <label for="password">Kodeord</label>
+        <input type="password" placeholder="Indtast dit kodeord" id="password" name="password" class="form--input" autocomplete="off" required>
+      </div>
+      <input type="submit" class="button" value="Log ind">
+    </form>
+  </div>
+  
+<footer class="footer">
+  <a href="/public/cookies_da.htm">Brug af cookies</a><a href="#" class="footer--saved-login js-footer-saved-login">Slet loginvalg</a>
+
+   <a href="javascript:set_language(&#39;en&#39;); void(0);" title="view english version" class="footer--language">English</a>
+</footer>
+
+</div>
+
+
+
+<!-- system footer begin -->
+</div>
+<div style="width: 100%; padding-top: 3px; text-align: center; font-size: 10px;">Powered by Netic Hotspot Solution - Copyright &copy; Netic A/S
+</div>
+</body></html>
