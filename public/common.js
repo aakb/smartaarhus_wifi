@@ -14,7 +14,7 @@ function redirectToLogin() {
 function checkLoginSaved() {
   var savedLoginLink = $('.js-footer-saved-login');
 
-  if ($.cookie('cookie_redirect') != undefined) {
+  if ($.cookie('cookie_redirect') != undefined || $.cookie('cookie_hide_message') != undefined ) {
     savedLoginLink.show();
   } else {
     savedLoginLink.hide();
