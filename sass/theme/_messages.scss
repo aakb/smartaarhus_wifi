@@ -67,15 +67,3 @@
   @extend %message-red;
   @extend .message;
 }
-
-.message--cookie {
-  @extend %message-green;
-  @extend .message;
-
-  display: none;
-}
-
-.message--cookie-saved,
-.message--cookie-not-saved {
-  display: none;
-}

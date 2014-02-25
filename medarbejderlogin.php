@@ -8,12 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1 class="saved-login--header">Medarbejderlogin <span class="saved-login--link js-footer-saved-login">(<a href="#">Slet loginvalg</a>)</span></h1>
-  <div class="message--cookie js-cookie-message">
-    <p class="message--cookie-saved js-cookie-message-saved">Vil du viderestilles til dette login næste gang du skal logge ind? <a href="#" class="js-save-login-choice">Ja tak, gem mit loginvalg</a></p>
-    <p class="message--cookie-not-saved js-cookie-message-not-saved">Du har gemt dette som dit loginvalg. <a href="#" class="js-delete-login-choice">Slet loginvalg</a></p>
-    <a href="#" class="js-hide-message">Vis ikke denne besked igen</a>
-  </div>
+  <h1>Medarbejderlogin<span class="saved-login--link js-save-login-choice js-login-choice">(<a href="#">Husk mit valg</a>)</span><span class="saved-login--link js-delete-login-choice">(<a href="#">Glem mit valg</a>)</span></h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">AZ-ident</label>

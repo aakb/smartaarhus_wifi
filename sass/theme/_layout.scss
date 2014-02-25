@@ -172,18 +172,14 @@
 
 /* Saved login */
 
-.saved-login--header {
-}
-
 .saved-login--link {
-  display: block;
+  display: none;
 
   font-size: .5em;
 
   @include breakpoint(24em) {
     position: absolute;
 
-    display: inline-block;
     margin-top: .75em;
     margin-left: .5em;
   }
@@ -194,11 +190,6 @@
 
 .footer {
   text-align: center;
-}
-
-.footer--saved-login {
-  display: none;
-  margin-left: 1em;
 }
 
 .footer--language {

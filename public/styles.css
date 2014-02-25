@@ -254,34 +254,27 @@
 }
 
 /* Saved login */
-/* line 178, ../sass/theme/_layout.scss */
+/* line 175, ../sass/theme/_layout.scss */
 .saved-login--link {
-  display: block;
+  display: none;
   font-size: .5em;
 }
 @media only screen and (min-width: 24em) {
-  /* line 178, ../sass/theme/_layout.scss */
+  /* line 175, ../sass/theme/_layout.scss */
   .saved-login--link {
     position: absolute;
-    display: inline-block;
     margin-top: .75em;
     margin-left: .5em;
   }
 }
 
 /* Footer */
-/* line 195, ../sass/theme/_layout.scss */
+/* line 191, ../sass/theme/_layout.scss */
 .footer {
   text-align: center;
 }
 
-/* line 199, ../sass/theme/_layout.scss */
-.footer--saved-login {
-  display: none;
-  margin-left: 1em;
-}
-
-/* line 204, ../sass/theme/_layout.scss */
+/* line 195, ../sass/theme/_layout.scss */
 .footer--language {
   margin-left: 1em;
 }
@@ -394,7 +387,7 @@
  *
  */
 /* line 8, ../sass/theme/_messages.scss */
-.message--success, .message--cookie {
+.message--success {
   background-color: #b9ff73;
   color: #3a7300;
 }
@@ -427,7 +420,7 @@
 }
 
 /* line 38, ../sass/theme/_messages.scss */
-.message, .message--success, .message--warning, .message--error, .message--cookie {
+.message, .message--success, .message--warning, .message--error {
   margin-bottom: 2em;
   padding: 1em 1.5em;
   -webkit-border-radius: 0.6em;
@@ -437,25 +430,14 @@
   border-radius: 0.6em;
 }
 /* line 44, ../sass/theme/_messages.scss */
-.message label, .message--success label, .message--warning label, .message--error label, .message--cookie label {
+.message label, .message--success label, .message--warning label, .message--error label {
   display: inline;
   margin: 0;
   font-weight: bold;
 }
 /* line 51, ../sass/theme/_messages.scss */
-.message p:last-child, .message--success p:last-child, .message--warning p:last-child, .message--error p:last-child, .message--cookie p:last-child {
+.message p:last-child, .message--success p:last-child, .message--warning p:last-child, .message--error p:last-child {
   margin-bottom: 0;
-}
-
-/* line 71, ../sass/theme/_messages.scss */
-.message--cookie {
-  display: none;
-}
-
-/* line 79, ../sass/theme/_messages.scss */
-.message--cookie-saved,
-.message--cookie-not-saved {
-  display: none;
 }
 
 /**

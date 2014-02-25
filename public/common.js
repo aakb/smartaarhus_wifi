@@ -12,14 +12,16 @@ function redirectToLogin() {
 }
 
 function checkLoginSaved() {
-  var savedLoginLink = $('.js-footer-saved-login');
+  var saveLogin = $('.js-save-login-choice');
+  var deleteLogin = $('.js-delete-login-choice');
 
   if ($.cookie('cookie_redirect') != undefined || $.cookie('cookie_hide_message') != undefined ) {
-    savedLoginLink.show();
+    saveLogin.hide();
+    deleteLogin.show();
   } else {
-    savedLoginLink.hide();
+    saveLogin.show();
+    deleteLogin.hide();
   }
-
 }
 
 // Save login choice.
@@ -44,34 +46,6 @@ function deleteAllCookies(selector, text) {
   if(selector) $(selector).text(text);
 }
 
-// Show a message if the user is redirected
-function cookieMessage() {
-  var cookieMessage = $('.js-cookie-message');
-  var cookieMessageSaved = $('.js-cookie-message-saved');
-  var cookieLoginMessageNotsaved = $('.js-cookie-message-not-saved');
-
-  if ($.cookie('cookie_redirect') != undefined) {
-    cookieMessageSaved.hide();
-    cookieLoginMessageNotsaved.show();
-  } else {
-    cookieMessageSaved.show();
-    cookieLoginMessageNotsaved.hide();
-  }
-
-  // Show the message container
-  if ($.cookie('cookie_hide_message') != 1) {
-    // Show the message.
-    cookieMessage.show();
-  }
-
-  // Attach hide message function to link
-  $('.js-hide-message').click(function() {
-    $.cookie('cookie_hide_message', 1, { expires: 30, path: '/' });
-
-    cookieMessage.hide();
-    return false;
-  });
-}
 
 /**
  * Function for show/hide password in input fields
@@ -90,8 +64,6 @@ function showHidePassword(toggleText) {
          hidden: { toggleText: toggleText.show }
       }
   });
-  
-
 }
 
 /**
@@ -129,22 +101,19 @@ $(document).ready(function() {
   // Check if the user has saved login.
   checkLoginSaved();
 
-  // Handle login-choice
-  if ( $('.js-cookie-message') ) {
-    cookieMessage();
+  // Save login choice.
+  $('.js-save-login-choice').click(function() {
+    saveLoginChoice(translations[language].saveLoginChoice);
 
-    // Save login choice.
-    $('.js-save-login-choice').click(function() {
-      saveLoginChoice(translations[language].saveLoginChoice);
-      return false;
-    });
+    location.reload();
+  });
 
-    // Delete login choice.
-    $('.js-delete-login-choice').click(function() {
-      deleteLoginChoice(translations[language].deleteLoginChoice);
-      return false;
-    });
-  }
+  // Delete login choice.
+  $('.js-delete-login-choice').click(function() {
+    deleteLoginChoice(translations[language].deleteLoginChoice);
+
+    location.reload();
+  });
 
   // Handle link on cookies-page.
   $('.js-delete-cookies-link').click(function() {
@@ -152,13 +121,6 @@ $(document).ready(function() {
     return false;
   });
 
-  // Handle link in footer.
-  $('.js-footer-saved-login').click(function() {
-    deleteAllCookies();
-    window.location.reload();
-    return false;
-  });
-  
   // Handle toplink
   $('.js-toplink').click(function() {
     //deleteAllCookies();
