@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Brug af cookies - english version</title>
+  <title>Error - english version</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

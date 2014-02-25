@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>G&aelig;stelogin - english version</title>
+  <title>Guest login - english version</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Guestlogin</h1>
+  <h1>Guest login</h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
