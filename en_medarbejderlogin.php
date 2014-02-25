@@ -10,7 +10,7 @@
 <div class="layout">
   <h1>Employee login - english version</h1>
   <div class="message--cookie js-cookie-message">
-    <p class="message--cookie-saved js-cookie-message-saved">Do you wish to be forwarded to this page the next time you log in? <a href="#" class="js-save-login-choice">Yes, please save my login choice</a></p>
+    <p class="message--cookie-saved js-cookie-message-saved">Do you wish to be forwarded to this page the next time you log in? <a href="#" class="js-save-login-choice">Yes, save my login choice</a></p>
     <p class="message--cookie-not-saved js-cookie-message-not-saved">Your login choice has been saved. <a href="#" class="js-delete-login-choice">Delete login choice</a></p>
     <a href="#" class="js-hide-message">Do not show this message again</a>
   </div>
