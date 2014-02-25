@@ -155,12 +155,13 @@ $(document).ready(function() {
   // Handle link in footer.
   $('.js-footer-saved-login').click(function() {
     deleteAllCookies();
+    window.location.reload();
     return false;
   });
   
   // Handle toplink
   $('.js-toplink').click(function() {
-    deleteAllCookies();
+    //deleteAllCookies();
     window.location.replace('/auth/method/' + window.location.search);
     return false;
   });
