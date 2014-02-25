@@ -14,7 +14,7 @@ function redirectToLogin() {
 function checkLoginSaved() {
   var savedLoginLink = $('.js-footer-saved-login');
 
-  if ($.cookie('cookie_redirect') != undefined) {
+  if ($.cookie('cookie_redirect') != undefined || $.cookie('cookie_hide_message') != undefined ) {
     savedLoginLink.show();
   } else {
     savedLoginLink.hide();
@@ -155,12 +155,13 @@ $(document).ready(function() {
   // Handle link in footer.
   $('.js-footer-saved-login').click(function() {
     deleteAllCookies();
+    window.location.reload();
     return false;
   });
   
   // Handle toplink
   $('.js-toplink').click(function() {
-    deleteAllCookies();
+    //deleteAllCookies();
     window.location.replace('/auth/method/' + window.location.search);
     return false;
   });
