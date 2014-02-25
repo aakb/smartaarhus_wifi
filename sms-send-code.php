@@ -13,8 +13,8 @@
   <div class="form--wrapper">
     <form action="sms-login.php" method="post">
       <label for="username">Mobilnummer</label>
-      <input type="number" placeholder="Indtast dit mobilnummer" id="username" name="username" class="form--input" autocomplete="off" required />
-      <input type="submit" class="button" value="Send SMS" />
+      <input type="number" placeholder="Indtast dit mobilnummer" id="username" name="username" class="form--input" autocomplete="off" required>
+      <input type="submit" class="button" value="Send SMS">
     </form>
   </div>
   <?php include('inc/footer.inc'); ?>

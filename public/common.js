@@ -100,7 +100,9 @@ function showHidePassword(toggleText) {
 
 $(document).ready(function() {
 
-
+  // Add h5Validate to forms.
+  // http://ericleads.com/h5validate/
+  $('form').h5Validate();
 
   // Get the sites language from global template.
   // update Global variable.

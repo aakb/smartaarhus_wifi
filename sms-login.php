@@ -13,12 +13,12 @@
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">Mobilnummer</label>    
-      <input type="text" value="%TIDY[sms_number]" disabled="disabled" class="form--input" autocomplete="off" required  />      
+      <input type="text" value="%TIDY[sms_number]" disabled="disabled" class="form--input" autocomplete="off" required>
       <div class="form--password-wrapper">
         <label for="password">Indtast kode</label>
-        <input type="password" placeholder="Indtast kode fra SMS" id="password" name="password" class="form--input" autocomplete="off" required />
+        <input type="password" placeholder="Indtast kode fra SMS" id="password" name="password" class="form--input" autocomplete="off" required>
       </div>
-      <input type="submit" class="button" value="Log ind" />
+      <input type="submit" class="button" value="Log ind">
     </form>
   </div>
   <?php include('inc/footer.inc'); ?>

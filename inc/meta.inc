@@ -5,4 +5,5 @@
 <script type="text/javascript" src="/public/jquery.2.0.3.min.js"></script>
 <script type="text/javascript" src="/public/hide-password.min.js"></script>
 <script type="text/javascript" src="/public/jquery.cookie.js"></script>
+<script type="text/javascript" src="/public/jquery.h5validate.js"></script>
 <script type="text/javascript" src="/public/common.js"></script>
