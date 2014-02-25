@@ -803,7 +803,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: .25em;
+  margin-bottom: 1em;
   color: #666666;
   font-family: Arial, sans-serif;
   font-size: 175%;
@@ -814,44 +814,53 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-/* line 38, ../sass/base/_base.scss */
+/* line 41, ../sass/base/_base.scss */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: .25em;
+}
+
+/* line 46, ../sass/base/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 43, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 em {
   font-style: italic;
 }
-/* line 46, ../sass/base/_base.scss */
+/* line 54, ../sass/base/_base.scss */
 em strong {
   font-weight: bold;
 }
 
 /* Links
    ================================================================================================================== */
-/* line 57, ../sass/base/_base.scss */
+/* line 65, ../sass/base/_base.scss */
 a:link {
   color: #2d84d8;
   text-decoration: underline;
 }
-/* line 62, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 a:visited {
   color: #2577c7;
 }
-/* line 66, ../sass/base/_base.scss */
+/* line 74, ../sass/base/_base.scss */
 a:hover {
   color: #216ab1;
   text-decoration: none;
 }
-/* line 71, ../sass/base/_base.scss */
+/* line 79, ../sass/base/_base.scss */
 a:focus {
   color: #216ab1;
 }
 
 /* Paragraph
    ================================================================================================================== */
-/* line 80, ../sass/base/_base.scss */
+/* line 88, ../sass/base/_base.scss */
 p {
   margin-top: 0;
   margin-bottom: 1.25em;
@@ -859,7 +868,7 @@ p {
 
 /* Image
    ================================================================================================================== */
-/* line 89, ../sass/base/_base.scss */
+/* line 97, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
