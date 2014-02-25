@@ -170,6 +170,26 @@
 }
 
 
+/* Saved login */
+
+.saved-login--header {
+}
+
+.saved-login--link {
+  display: block;
+
+  font-size: .5em;
+
+  @include breakpoint(24em) {
+    position: absolute;
+
+    display: inline-block;
+    margin-top: .75em;
+    margin-left: .5em;
+  }
+}
+
+
 /* Footer */
 
 .footer {

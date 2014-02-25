@@ -253,19 +253,35 @@
   padding-left: 2em;
 }
 
+/* Saved login */
+/* line 178, ../sass/theme/_layout.scss */
+.saved-login--link {
+  display: block;
+  font-size: .5em;
+}
+@media only screen and (min-width: 24em) {
+  /* line 178, ../sass/theme/_layout.scss */
+  .saved-login--link {
+    position: absolute;
+    display: inline-block;
+    margin-top: .75em;
+    margin-left: .5em;
+  }
+}
+
 /* Footer */
-/* line 175, ../sass/theme/_layout.scss */
+/* line 195, ../sass/theme/_layout.scss */
 .footer {
   text-align: center;
 }
 
-/* line 179, ../sass/theme/_layout.scss */
+/* line 199, ../sass/theme/_layout.scss */
 .footer--saved-login {
   display: none;
   margin-left: 1em;
 }
 
-/* line 184, ../sass/theme/_layout.scss */
+/* line 204, ../sass/theme/_layout.scss */
 .footer--language {
   margin-left: 1em;
 }
