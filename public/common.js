@@ -79,22 +79,20 @@ function cookieMessage() {
  * Function for show/hide password in input fields
  */
 
-function showHidePassword() {
+function showHidePassword(hideText, showText) {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
   
-  var toogletext = { da : [ 'Skjul', 'Vis'], en : [ 'Hide', 'Show' ] };
-
   $('input[type="password"]').hideShowPassword({
       show: false,
       innerToggle: true,
       toggleClass: 'form--toggle-password',
       states: {
          shown: {
-            toggleText: toogletext[language][0] // 'Skjul' 
+            toggleText: hideText // 'Skjul' 
           },
           hidden: {
-            toggleText: toogletext[language][1] // 'Vis'
+            toggleText: showText // 'Vis'
           }
       }
   });
@@ -109,10 +107,13 @@ function showHidePassword() {
 $(document).ready(function() {
 
   // Get the sites language from global template
+  // update Global variable
   language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
-
+  
+  var toogletext = { da : [ 'Skjul', 'Vis'], en : [ 'Hide', 'Show' ] };
+  
   // Show/hide password.
-  showHidePassword();
+  showHidePassword(toogletext[language][0], toogletext[language][1]);
 
   // Check if the user has saved login
   checkLoginSaved();
