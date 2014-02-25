@@ -4,8 +4,6 @@
  * Cookie is used for redirecting the user to the last used login
  */
 
-var language = 'da'; // Default
-
 // Redirect to login choice.
 function redirectToLogin() {
   if ($.cookie('cookie_redirect') != undefined) {
@@ -104,7 +102,7 @@ $(document).ready(function() {
 
   // Get the sites language from global template
   // update Global variable
-  language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
+  var language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
   
   var translations = {
            da : {
