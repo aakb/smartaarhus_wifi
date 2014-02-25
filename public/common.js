@@ -82,38 +82,20 @@ function showHidePassword() {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
 
-  // $('.js-form-toggle-password').click(function() {
-    // // Get element from data attribute and attach togglePassword function.
-    // $('#' + $(this).attr('data-toggle-password')).togglePassword();
-  // });
-
-  // // Change text.
-  // $('.form--input').on('passwordShown', function () {
-    // $('.js-form-toggle-text', $(this).parent()).text('Skjul')
-
-  // }).on('passwordHidden', function () {
-    // $('.js-form-toggle-text', $(this).parent()).text('Vis')
-  // });
-
-  var options = {
-    show: 'infer',
-    innerToggle: true,
-    toggleClass: 'form--toggle-password',
-    states: {
-
-       shown: {
-          // Text of the toggle element.
-          toggleText: 'Skjul'
-        },
-
-        hidden: {
-          toggleText: 'Vis'
-        }
-    }
-
-  }
-  $('#username').hideShowPassword(options);
-  $('#password').hideShowPassword(options);
+  $('input[type="password"]').hideShowPassword({
+      show: false,
+      innerToggle: true,
+      toggleClass: 'form--toggle-password',
+      states: {
+         shown: {
+            toggleText: 'Skjul'
+          },
+          hidden: {
+            toggleText: 'Vis'
+          }
+      }
+  });
+  
 
 }
 
