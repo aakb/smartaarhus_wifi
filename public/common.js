@@ -99,7 +99,6 @@ function showHidePassword() {
 
 }
 
-
 /**
  * Start the magic.
  */
@@ -129,15 +128,24 @@ $(document).ready(function() {
     });
   }
 
-  // Handle delete-cookies-link
+  // Handle link on cookies-page
   $('.js-delete-cookies-link').click(function() {
     deleteAllCookies($('.js-delete-cookies'));
     return false;
   });
 
+  // Handle link in footer
   $('.js-footer-saved-login').click(function() {
     deleteAllCookies();
     return false;
   });
+  
+  // Handle toplink
+  $('.js-toplink').click(function() {
+    deleteAllCookies();
+    window.location.replace('/auth/method/' + window.location.search);
+    return false;
+  });
+  
 
 });
