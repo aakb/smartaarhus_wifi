@@ -4,6 +4,7 @@
  * Cookie is used for redirecting the user to the last used login
  */
 
+var language = 'da'; // Default
 
 // Redirect to login choice.
 function redirectToLogin() {
@@ -81,6 +82,8 @@ function cookieMessage() {
 function showHidePassword() {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
+  
+  var toogletext = { da : [ 'Skjul', 'Vis'], en : [ 'Hide', 'Show' ] };
 
   $('input[type="password"]').hideShowPassword({
       show: false,
@@ -88,10 +91,10 @@ function showHidePassword() {
       toggleClass: 'form--toggle-password',
       states: {
          shown: {
-            toggleText: 'Skjul'
+            toggleText: toogletext[language][0] // 'Skjul' 
           },
           hidden: {
-            toggleText: 'Vis'
+            toggleText: toogletext[language][1] // 'Vis'
           }
       }
   });
@@ -104,6 +107,9 @@ function showHidePassword() {
  */
 
 $(document).ready(function() {
+
+  // Get the sites language from global template
+  language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
 
   // Show/hide password.
   showHidePassword();
@@ -147,5 +153,4 @@ $(document).ready(function() {
     return false;
   });
   
-
 });
