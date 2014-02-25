@@ -25,25 +25,25 @@ function checkLoginSaved() {
 }
 
 // Save login choice.
-function saveLoginChoice() {
+function saveLoginChoice(text) {
   $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
-  $('.js-cookie-message-saved').text('Dit loginvalg er gemt');
+  $('.js-cookie-message-saved').text(text);
 }
 
 // Delete login choice.
-function deleteLoginChoice() {
+function deleteLoginChoice(text) {
   $.removeCookie('cookie_redirect', { path: '/' });
 
-  $('.js-cookie-message-not-saved').text('Dit loginvalg er slettet');
+  $('.js-cookie-message-not-saved').text(text);
 }
 
 // Delete all cookies choice.
-function deleteAllCookies(messageObj) {
+function deleteAllCookies(selector, text) {
   $.removeCookie('cookie_redirect', { path: '/' });
   $.removeCookie('cookie_hide_message', { path: '/' });
 
-  if(messageObj) messageObj.text('Cookies blev slettet');
+  if(selector) $(selector).text(text);
 }
 
 // Show a message if the user is redirected
@@ -123,20 +123,20 @@ $(document).ready(function() {
 
     // Save login choice
     $('.js-save-login-choice').click(function() {
-      saveLoginChoice();
+      saveLoginChoice('Dit loginvalg er gemt');
       return false;
     });
 
     // Delete login choice
     $('.js-delete-login-choice').click(function() {
-      deleteLoginChoice();
+      deleteLoginChoice('Dit loginvalg er slettet');
       return false;
     });
   }
 
   // Handle link on cookies-page
   $('.js-delete-cookies-link').click(function() {
-    deleteAllCookies($('.js-delete-cookies'));
+    deleteAllCookies('.js-delete-cookies', 'Cookies blev slettet');
     return false;
   });
 
@@ -152,5 +152,5 @@ $(document).ready(function() {
     window.location.replace('/auth/method/' + window.location.search);
     return false;
   });
-  
+
 });
