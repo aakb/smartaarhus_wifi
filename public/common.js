@@ -139,5 +139,12 @@ $(document).ready(function() {
     deleteAllCookies();
     return false;
   });
+  
+  $('.js-toplink').click(function() {
+    deleteAllCookies();
+    history.back(1);
+    return false;
+  }
+  
 
 });
