@@ -100,55 +100,57 @@ function showHidePassword(toggleText) {
 
 $(document).ready(function() {
 
-  // Get the sites language from global template
-  // update Global variable
+
+
+  // Get the sites language from global template.
+  // update Global variable.
   var language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
   
   var translations = {
-           da : {
-                  toogleText : { hide : 'Skjul', show : 'Vis' },
-                  saveLoginChoice : 'Dit loginvalg er gemt',
-                  deleteLoginChoice : 'Dit loginvalg er slettet',
-                  deleteAllCookies : 'Cookies blev slettet'
-                },
-           en : {
-                  toogleText : { hide : 'Hide',  show : 'Show' },
-                  saveLoginChoice : 'Your login choice are saved',
-                  deleteLoginChoice : 'Your login choice are deleted',
-                  deleteAllCookies : 'Cookies deleted'
-                }
-              };
+    da : {
+      toogleText : { hide : 'Skjul', show : 'Vis' },
+      saveLoginChoice : 'Dit loginvalg er gemt',
+      deleteLoginChoice : 'Dit loginvalg er slettet',
+      deleteAllCookies : 'Cookies blev slettet'
+    },
+    en : {
+      toogleText : { hide : 'Hide',  show : 'Show' },
+      saveLoginChoice : 'Your login choice are saved',
+      deleteLoginChoice : 'Your login choice are deleted',
+      deleteAllCookies : 'Cookies deleted'
+    }
+  };
   
   // Show/hide password.
   showHidePassword(translations[language].toogleText);
 
-  // Check if the user has saved login
+  // Check if the user has saved login.
   checkLoginSaved();
 
   // Handle login-choice
   if ( $('.js-cookie-message') ) {
     cookieMessage();
 
-    // Save login choice
+    // Save login choice.
     $('.js-save-login-choice').click(function() {
       saveLoginChoice(translations[language].saveLoginChoice);
       return false;
     });
 
-    // Delete login choice
+    // Delete login choice.
     $('.js-delete-login-choice').click(function() {
       deleteLoginChoice(translations[language].deleteLoginChoice);
       return false;
     });
   }
 
-  // Handle link on cookies-page
+  // Handle link on cookies-page.
   $('.js-delete-cookies-link').click(function() {
     deleteAllCookies('.js-delete-cookies', translations[language].deleteAllCookies );
     return false;
   });
 
-  // Handle link in footer
+  // Handle link in footer.
   $('.js-footer-saved-login').click(function() {
     deleteAllCookies();
     return false;
