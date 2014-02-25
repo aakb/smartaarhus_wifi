@@ -385,17 +385,17 @@
 }
 /* line 17, ../sass/theme/_messages.scss */
 .message--error a:link {
-  color: white;
+  color: #ffb29e;
   text-decoration: underline;
 }
 /* line 22, ../sass/theme/_messages.scss */
 .message--error a:visited {
-  color: #f2f2f2;
+  color: #ffc6b8;
 }
 /* line 27, ../sass/theme/_messages.scss */
 .message--error a:hover,
 .message--error a:focus {
-  color: #e6e6e6;
+  color: #ffdad1;
   text-decoration: none;
 }
 
