@@ -79,7 +79,7 @@ function cookieMessage() {
  * Function for show/hide password in input fields
  */
 
-function showHidePassword(hideText, showText) {
+function showHidePassword(toggleText) {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
   
@@ -88,12 +88,8 @@ function showHidePassword(hideText, showText) {
       innerToggle: true,
       toggleClass: 'form--toggle-password',
       states: {
-         shown: {
-            toggleText: hideText // 'Skjul' 
-          },
-          hidden: {
-            toggleText: showText // 'Vis'
-          }
+         shown: { toggleText: toggleText.hide },
+         hidden: { toggleText: toggleText.show }
       }
   });
   
@@ -110,10 +106,23 @@ $(document).ready(function() {
   // update Global variable
   language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
   
-  var toogletext = { da : [ 'Skjul', 'Vis'], en : [ 'Hide', 'Show' ] };
+  var translations = {
+           da : {
+                  toogleText : { hide : 'Skjul', show : 'Vis' },
+                  saveLoginChoice : 'Dit loginvalg er gemt',
+                  deleteLoginChoice : 'Dit loginvalg er slettet',
+                  deleteAllCookies : 'Cookies blev slettet'
+                },
+           en : {
+                  toogleText : { hide : 'Hide',  show : 'Show' },
+                  saveLoginChoice : 'Your login choice are saved',
+                  deleteLoginChoice : 'Your login choice are deleted',
+                  deleteAllCookies : 'Cookies deleted'
+                }
+              };
   
   // Show/hide password.
-  showHidePassword(toogletext[language][0], toogletext[language][1]);
+  showHidePassword(translations[language].toogleText);
 
   // Check if the user has saved login
   checkLoginSaved();
@@ -124,20 +133,20 @@ $(document).ready(function() {
 
     // Save login choice
     $('.js-save-login-choice').click(function() {
-      saveLoginChoice('Dit loginvalg er gemt');
+      saveLoginChoice(translations[language].saveLoginChoice);
       return false;
     });
 
     // Delete login choice
     $('.js-delete-login-choice').click(function() {
-      deleteLoginChoice('Dit loginvalg er slettet');
+      deleteLoginChoice(translations[language].deleteLoginChoice);
       return false;
     });
   }
 
   // Handle link on cookies-page
   $('.js-delete-cookies-link').click(function() {
-    deleteAllCookies('.js-delete-cookies', 'Cookies blev slettet');
+    deleteAllCookies('.js-delete-cookies', translations[language].deleteAllCookies );
     return false;
   });
 
