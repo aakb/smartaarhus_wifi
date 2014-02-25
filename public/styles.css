@@ -43,7 +43,7 @@
  *
  */
 /* line 9, ../sass/theme/_buttons.scss */
-.button, .link-button {
+.button, .button-small, .link-button {
   display: inline-block;
   font-size: 125%;
   padding: .65em 1.5em;
@@ -59,12 +59,12 @@
   text-shadow: 0 0.025em 0 #266eb2;
 }
 /* line 21, ../sass/theme/_buttons.scss */
-.button:focus, .link-button:focus, .button:hover, .link-button:hover, .button:active, .link-button:active {
+.button:focus, .button-small:focus, .link-button:focus, .button:hover, .button-small:hover, .link-button:hover, .button:active, .button-small:active, .link-button:active {
   text-decoration: none;
 }
 
 /* line 29, ../sass/theme/_buttons.scss */
-.button, .link-button {
+.button, .button-small, .link-button {
   background-color: #3788d4;
   border: 0;
   color: white;
@@ -74,9 +74,14 @@
   box-sizing: border-box;
 }
 /* line 40, ../sass/theme/_buttons.scss */
-.button:hover, .link-button:hover {
+.button:hover, .button-small:hover, .link-button:hover {
   background-color: #2b7bc7;
   color: white;
+}
+
+/* line 46, ../sass/theme/_buttons.scss */
+.button-small {
+  width: 25%;
 }
 
 /**
@@ -798,7 +803,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: .75em;
+  margin-bottom: .25em;
   color: #666666;
   font-family: Arial, sans-serif;
   font-size: 175%;
@@ -849,11 +854,12 @@ a:focus {
 /* line 80, ../sass/base/_base.scss */
 p {
   margin-top: 0;
+  margin-bottom: 1.25em;
 }
 
 /* Image
    ================================================================================================================== */
-/* line 88, ../sass/base/_base.scss */
+/* line 89, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
