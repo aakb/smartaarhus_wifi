@@ -15,17 +15,17 @@
   color: darken($red, 40%);
 
   a:link {
-    color: lighten($red, 20%);
+    color: lighten($red, 30%);
     text-decoration: underline;
   }
 
   a:visited {
-    color: lighten($red, 25%);
+    color: lighten($red, 35%);
   }
 
   a:hover,
   a:focus {
-    color: lighten($red, 30%);
+    color: lighten($red, 40%);
     text-decoration: none;
   }
 }
