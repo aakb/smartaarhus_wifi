@@ -41,6 +41,12 @@
     background-color: darken($blue, 5%);
     color: $white;
   }
+
+  &[disabled] {
+    background-color: $gray-light;
+
+    @include text-shadow(0 .025em 0 $gray-dark);
+  }
 }
 
 .button-small {

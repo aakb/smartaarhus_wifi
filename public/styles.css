@@ -78,8 +78,13 @@
   background-color: #2b7bc7;
   color: white;
 }
+/* line 45, ../sass/theme/_buttons.scss */
+.button[disabled], [disabled].button-small, [disabled].link-button {
+  background-color: #aaaaaa;
+  text-shadow: 0 0.025em 0 #666666;
+}
 
-/* line 46, ../sass/theme/_buttons.scss */
+/* line 52, ../sass/theme/_buttons.scss */
 .button-small {
   width: 25%;
 }
