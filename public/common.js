@@ -88,6 +88,15 @@ function useOtherSubmitUrl() {
   });
 }
 
+function showLoginMessage(text){
+  $('.js-save-login-message')
+    .html(text)
+    .addClass('message--success')
+    .show()
+    .delay(5000)
+    .fadeOut(500);
+}
+
 var translationsStrings = {};
 
 /**
@@ -127,30 +136,16 @@ $(document).ready(function() {
   // Save login choice.
   $('.js-save-login-choice').click(function() {
     $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
-
-    $('.js-save-login-message')
-      .html(translationStrings.loginSaved)
-      .addClass('message--success')
-      .show()
-      .delay(5000)
-      .fadeOut(500);
-
     checkLoginChoice();
+    showLoginMessage(translationStrings.loginSaved);
     return false;
   });
 
   // Delete login choice.
   $('.js-delete-login-choice').click(function() {
     $.removeCookie('cookie_redirect', { path: '/' });
-
-    $('.js-save-login-message')
-      .html(translationStrings.loginDeleted)
-      .addClass('message--success')
-      .show()
-      .delay(5000)
-      .fadeOut(500);
-
     checkLoginChoice();
+    showLoginMessage(translationStrings.loginDeleted);
     return false;
   });
 
