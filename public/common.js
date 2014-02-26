@@ -30,7 +30,7 @@ function checkLoginChoice() {
  * Function for show/hide password in input fields
  */
 
-function showHidePassword(toggleText) {
+function showHidePassword() {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
 
@@ -44,13 +44,13 @@ function showHidePassword(toggleText) {
       innerToggle: true,
       toggleClass: 'form--toggle-password',
       states: {
-         shown: { toggleText: toggleText.hide },
-         hidden: { toggleText: toggleText.show }
+         shown: { toggleText: translationStrings.toogleText.hide },
+         hidden: { toggleText: translationStrings.toogleText.show }
       }
   });
 }
 
-function useOtherSubmitUrl(errorTextMissingValues, buttonLoadingText) {
+function useOtherSubmitUrl() {
 
   // Activate only on pages with js-message class
   if (!$('.js-message').length) {
@@ -69,7 +69,7 @@ function useOtherSubmitUrl(errorTextMissingValues, buttonLoadingText) {
 
     // Disable button on submit.
     button.prop('disabled', true);
-    button.val(buttonLoadingText);
+    button.val(translationStrings.buttonLoadingText);
 
      // Send the data using post.
     $.post(url, postdata, 'json').done(function(respdata) {
@@ -77,7 +77,7 @@ function useOtherSubmitUrl(errorTextMissingValues, buttonLoadingText) {
          window.location.replace(respdata.redirect);
       }
     }).fail(function(respdata) {
-      var text = respdata.responseJSON.message ? respdata.responseJSON.message : errorTextMissingValues;
+      var text = respdata.responseJSON.message ? respdata.responseJSON.message : translationStrings.missingValues;
       $('.js-message').html(text).addClass('message--error');
     }).always(function() {
       // Enable button on submit.
@@ -88,6 +88,7 @@ function useOtherSubmitUrl(errorTextMissingValues, buttonLoadingText) {
   });
 }
 
+var translationsStrings = {};
 
 /**
  * Start the magic.
@@ -98,31 +99,27 @@ $(document).ready(function() {
   // http://ericleads.com/h5validate/
   $('form').h5Validate();
 
-  // Get the sites language from global template.
-  // update Global variable.
-  var language = $.cookie('tidyLanguage') === 'en' ? 'en' : 'da';
-
-  var translations = {
-    da : {
-      toogleText : { hide : 'Skjul', show : 'Vis' },
-      deleteAllCookies : 'Cookies blev slettet',
-      loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
-      loginDeleted : 'Dit valg er glemt.',
-      missingValues : 'Udfyld venligst begge felter.',
-      buttonLoadingText : 'Logger ind...'
-    },
-    en : {
+  // Get the sites language from global template and update global variable.
+  translationStrings = $.cookie('tidyLanguage') === 'en' ? 
+    {
       toogleText : { hide : 'Hide',  show : 'Show' },
       deleteAllCookies : 'Cookies deleted',
       loginSaved : 'You will be redirected to this page the next time you login.',
       loginDeleted : 'Your choice is removed.',
       missingValues : 'Please enter username and password.',
       buttonLoadingText : 'Logging in...'
-    }
-  };
+    } : 
+    {
+      toogleText : { hide : 'Skjul', show : 'Vis' },
+      deleteAllCookies : 'Cookies blev slettet',
+      loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
+      loginDeleted : 'Dit valg er glemt.',
+      missingValues : 'Udfyld venligst begge felter.',
+      buttonLoadingText : 'Logger ind...'
+    };
 
   // Show/hide password.
-  showHidePassword(translations[language].toogleText);
+  showHidePassword();
 
   // Check if the user has saved login.
   checkLoginChoice();
@@ -132,7 +129,7 @@ $(document).ready(function() {
     $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
     $('.js-save-login-message')
-      .html(translations[language].loginSaved)
+      .html(translationStrings.loginSaved)
       .addClass('message--success')
       .show()
       .delay(5000)
@@ -147,7 +144,7 @@ $(document).ready(function() {
     $.removeCookie('cookie_redirect', { path: '/' });
 
     $('.js-save-login-message')
-      .html(translations[language].loginDeleted)
+      .html(translationStrings.loginDeleted)
       .addClass('message--success')
       .show()
       .delay(5000)
@@ -164,7 +161,7 @@ $(document).ready(function() {
   });
 
   // Handle submit via alternativ channel.
-  useOtherSubmitUrl(translations[language].missingValues, translations[language].buttonLoadingText);
+  useOtherSubmitUrl();
 
   // Hide nemid-login where java not available.
   if (!navigator.javaEnabled()) {
