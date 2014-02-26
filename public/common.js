@@ -6,21 +6,23 @@
 
 // Redirect to login choice.
 function redirectToLogin() {
-  if ($.cookie('cookie_redirect') != undefined) {
+  if ($.cookie('cookie_redirect') !== undefined) {
     window.location.replace($.cookie('cookie_redirect') + window.location.search);
   }
 }
 
+// Check if the user has saved a login choice.
 function checkLoginChoice() {
   var saveLogin = $('.js-save-login-choice');
   var deleteLogin = $('.js-delete-login-choice');
 
-  if ($.cookie('cookie_redirect') != undefined ) {
-    saveLogin.hide();
-    deleteLogin.show();
+  // Check if the cookie exists.
+  if ($.cookie('cookie_redirect') !== undefined ) {
+    saveLogin.removeClass('is-visible');
+    deleteLogin.toggleClass('is-visible');
   } else {
-    saveLogin.show();
-    deleteLogin.hide();
+    saveLogin.toggleClass('is-visible');
+    deleteLogin.removeClass('is-visible');
   }
 }
 
@@ -33,7 +35,9 @@ function showHidePassword(toggleText) {
   // URL: https://github.com/cloudfour/hideShowPassword.
   
   // Handle IE 8 in a simple way - we can't do this hide/show-thing.
-  if ( document.documentMode < 9 ) return;
+  if ( document.documentMode < 9 ) {
+    return;
+  }
 
   $('input[type="password"]').hideShowPassword({
       show: false,
@@ -51,14 +55,13 @@ function showHidePassword(toggleText) {
  */
 
 $(document).ready(function() {
-
   // Add h5Validate to forms.
   // http://ericleads.com/h5validate/
   $('form').h5Validate();
 
   // Get the sites language from global template.
   // update Global variable.
-  var language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
+  var language = $.cookie('tidyLanguage') === 'en' ? 'en' : 'da';
 
   var translations = {
     da : {

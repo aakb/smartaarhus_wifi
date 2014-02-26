@@ -8,7 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Medarbejderlogin<span class="saved-login--link js-save-login-choice js-login-choice">(<a href="#">Husk mit valg</a>)</span><span class="saved-login--link js-delete-login-choice">(<a href="#">Glem mit valg</a>)</span></h1>
+  <h1>Medarbejderlogin<span class="saved-login--link js-save-login-choice">(<a href="#">Husk mit valg</a>)</span><span class="saved-login--link js-delete-login-choice">(<a href="#">Glem mit valg</a>)</span></h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">AZ-ident</label>

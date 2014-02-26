@@ -259,6 +259,10 @@
   display: none;
   font-size: .5em;
 }
+/* line 180, ../sass/theme/_layout.scss */
+.saved-login--link.is-visible {
+  display: inline-block;
+}
 @media only screen and (min-width: 24em) {
   /* line 175, ../sass/theme/_layout.scss */
   .saved-login--link {
@@ -269,12 +273,12 @@
 }
 
 /* Footer */
-/* line 191, ../sass/theme/_layout.scss */
+/* line 195, ../sass/theme/_layout.scss */
 .footer {
   text-align: center;
 }
 
-/* line 195, ../sass/theme/_layout.scss */
+/* line 199, ../sass/theme/_layout.scss */
 .footer--language {
   margin-left: 1em;
 }
