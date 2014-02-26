@@ -262,7 +262,7 @@
 /* line 180, ../sass/theme/_layout.scss */
 .saved-login--link.is-visible {
   display: inline-block;
-  width: 100%;
+  width: auto;
 }
 @media only screen and (min-width: 24em) {
   /* line 175, ../sass/theme/_layout.scss */
