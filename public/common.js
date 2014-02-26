@@ -57,22 +57,29 @@ function useOtherSubmitUrl(errorTextMissingValues) {
     return;
   }
 
-  $( "form" ).submit(function( event ) {
+  $('form').submit(function(event) {
 
     // Stop form from submitting normally
     event.preventDefault();
 
     var postdata = $(this).serializeArray();
     var url = $(this).attr('action').replace('/action/', '/=/logon/');
+    var button = $('.button', this);
+
+    // Disable button on submit.
+    button.prop('disabled', true);
 
      // Send the data using post.
-    $.post( url, postdata, 'json').done(function(respdata) {
+    $.post(url, postdata, 'json').done(function(respdata) {
       if (respdata.authenticated && respdata.redirect) {
          window.location.replace(respdata.redirect);
       }
     }).fail(function(respdata) {
       var text = respdata.responseJSON.message ? respdata.responseJSON.message : errorTextMissingValues;
       $('.js-message').html(text).addClass('message--error');
+    }).always(function() {
+      // Enable button on submit.
+      button.prop('disabled', false);
     });
   });
 }
