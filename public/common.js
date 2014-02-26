@@ -33,7 +33,7 @@ function checkLoginChoice() {
 function showHidePassword(toggleText) {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
-  
+
   // Handle IE 8 in a simple way - we can't do this hide/show-thing.
   if ( document.documentMode < 9 ) {
     return;
@@ -49,6 +49,34 @@ function showHidePassword(toggleText) {
       }
   });
 }
+
+function useOtherSubmitUrl() {
+
+  // Activate only on pages with js-message class
+  if ( !$('.js-message').length ) return;
+
+  $( "form" ).submit(function( event ) {
+
+    // Stop form from submitting normally
+    event.preventDefault();
+
+    var postdata = $( this ).serializeArray();
+    var url = $(this).attr('action').replace('/action/', '/=/logon/')
+
+     // Send the data using post
+    var posting = $.post( url, postdata, 'json')
+    .done(function(respdata) {
+          if ( respdata.authenticated && respdata.redirect) {
+             window.location.replace(respdata.redirect);
+          }
+     })
+    .fail(function(respdata) {
+        $('.js-message').html('<h2>FEJL</h2>' + respdata.responseJSON.message).addClass('message--error')
+
+    })
+  });
+}
+
 
 /**
  * Start the magic.
@@ -102,5 +130,7 @@ $(document).ready(function() {
     history.back(1);
     return false;
   });
-  
+
+  useOtherSubmitUrl();
+
 });

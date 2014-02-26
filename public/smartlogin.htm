@@ -28,7 +28,46 @@ function set_language(lang) {
 <script type="text/javascript" src="/public/common.js"></script>
 <script type="text/javascript">
 // handle smartlogin (ajaxlogin via http://nwa-demo.netic.dk/auth/=/logon/ads ).
+
+
+
+
+
+function useOtherSubmitUrl() {
+
+  // Activate only on pages with js-message class
+  if ( !$('.js-message').length ) return;
+
+  $( "form" ).submit(function( event ) {
+   
+    // Stop form from submitting normally
+    event.preventDefault();
+   
+    var postdata = $( this ).serializeArray();
+    var url = $(this).attr('action').replace('/action/', '/=/logon/')
+    
+     // Send the data using post
+    var posting = $.post( url, postdata, 'json')
+    .done(function(respdata) {
+          if ( respdata && respdata.authenticated && respdata.redirect) {
+              window.location.replace(respdata.redirect);               
+          }       
+     })
+    .fail(function(respdata) {
+        $('.js-message').html('<h2>FEJL</h2>' + respdata.responseJSON.message).addClass('message--error')
+        
+    })
+  });
+
+
+}
+
+
 $(document).ready(function() {
+
+
+
+useOtherSubmitUrl() 
 
 
 });
@@ -44,9 +83,6 @@ $(document).ready(function() {
 
 
 
-
-
-
 <header class="header" role="banner">
   <div class="header--inner">
     <a href="/" class="back-link--wrapper js-toplink"><img src="/public/arrow-left.png" class="back-link"/></a>
@@ -57,7 +93,9 @@ $(document).ready(function() {
 
 <div class="layout">
   <h1>Medarbejderlogin</h1>
-  <div class="message--success js-message">
+    <div class="js-message"></div>
+    
+<!--  <div class="message--success js-message">
     <p>Dette er en succes.</p>
     <p><a href="#">Dette er et link</a></p>
   </div>
@@ -69,13 +107,9 @@ $(document).ready(function() {
     <p>Dette er en fejl.</p>
     <p><a href="#">Dette er et link</a></p>
   </div>
-  <div class="message--cookie js-cookie-message">
-    <p class="message--cookie-saved js-cookie-message-saved">Vil du viderestilles til dette login næste gang du skal logge ind? <a href="#" class="js-save-login-choice">Ja tak, gem mit loginvalg</a></p>
-    <p class="message--cookie-not-saved js-cookie-message-not-saved">Du har gemt dette som dit loginvalg. <a href="#" class="js-delete-login-choice">Slet loginvalg</a></p>
-    <a href="#" class="js-hide-message">Vis ikke denne besked igen</a>
-  </div>
+-->
   <div class="form--wrapper">
-    <form action="/auth/action/ads" method="post"><input type="hidden" name="intercept_uri" value="" />
+    <form action="/auth/action/axiell" method="post"><input type="hidden" name="intercept_uri" value="687474703A2F2F7777772E6F6461612E646B2F" />
       <label for="username">AZ-ident</label>
       <input type="text" placeholder="Indtast dit AZ-ident" id="username" name="username" class="form--input" autocomplete="off" required>
       <div class="form--password-wrapper">
