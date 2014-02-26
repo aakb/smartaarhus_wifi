@@ -177,6 +177,10 @@
 
   font-size: .5em;
 
+  &.is-visible {
+    display: inline-block;
+  }
+
   @include breakpoint(24em) {
     position: absolute;
 
