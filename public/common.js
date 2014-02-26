@@ -106,7 +106,7 @@ $(document).ready(function() {
       toogleText : { hide : 'Skjul', show : 'Vis' },
       deleteAllCookies : 'Cookies blev slettet',
       loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
-      loginDeleted : 'Dit valg er slettet.',
+      loginDeleted : 'Dit valg er glemt.',
       missingValues : 'Udfyld venligst begge felter.',
       buttonLoadingText : 'Logger ind...'
     },
