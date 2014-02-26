@@ -33,6 +33,9 @@ function checkLoginChoice() {
 function showHidePassword(toggleText) {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
+  
+  // Handle IE 8 in a simple way - we can't do this hide/show-thing.
+  if ( document.documentMode < 9 ) return;
 
   $('input[type="password"]').hideShowPassword({
       show: false,
@@ -104,5 +107,5 @@ $(document).ready(function() {
     window.location.replace('/auth/method/' + window.location.search);
     return false;
   });
-
+  
 });
