@@ -53,27 +53,26 @@ function showHidePassword(toggleText) {
 function useOtherSubmitUrl() {
 
   // Activate only on pages with js-message class
-  if ( !$('.js-message').length ) return;
+  if (!$('.js-message').length) {
+    return;
+  }
 
   $( "form" ).submit(function( event ) {
 
     // Stop form from submitting normally
     event.preventDefault();
 
-    var postdata = $( this ).serializeArray();
-    var url = $(this).attr('action').replace('/action/', '/=/logon/')
+    var postdata = $(this).serializeArray();
+    var url = $(this).attr('action').replace('/action/', '/=/logon/');
 
-     // Send the data using post
-    var posting = $.post( url, postdata, 'json')
-    .done(function(respdata) {
-          if ( respdata.authenticated && respdata.redirect) {
-             window.location.replace(respdata.redirect);
-          }
-     })
-    .fail(function(respdata) {
-        $('.js-message').html('<h2>FEJL</h2>' + respdata.responseJSON.message).addClass('message--error')
-
-    })
+     // Send the data using post.
+    $.post( url, postdata, 'json').done(function(respdata) {
+      if (respdata.authenticated && respdata.redirect) {
+         window.location.replace(respdata.redirect);
+      }
+     }).fail(function(respdata) {
+      $('.js-message').html(respdata.responseJSON.message).addClass('message--error');
+    });
   });
 }
 
@@ -126,7 +125,6 @@ $(document).ready(function() {
 
   // Handle toplink
   $('.js-toplink').click(function() {
-    //window.location.replace('/auth/method/' + window.location.search);
     history.back(1);
     return false;
   });
@@ -134,6 +132,8 @@ $(document).ready(function() {
   useOtherSubmitUrl();
   
   // Hide nemid-login where java not available.
-  if (!navigator.javaEnabled()) $('.js-javaenabled').hide();
+  if (!navigator.javaEnabled()) {
+    $('.js-javaenabled').hide();
+  }
 
 });
