@@ -13,17 +13,23 @@ function redirectToLogin() {
 
 // Check if the user has saved a login choice.
 function checkLoginChoice() {
-  var saveLogin = $('.js-save-login-choice');
-  var deleteLogin = $('.js-delete-login-choice');
+  // var saveLogin = $('.js-save-login-choice');
+  // var deleteLogin = $('.js-delete-login-choice');
 
-  // Check if the cookie exists.
-  if ($.cookie('cookie_redirect') !== undefined ) {
-    saveLogin.removeClass('is-visible');
-    deleteLogin.toggleClass('is-visible');
-  } else {
-    saveLogin.toggleClass('is-visible');
-    deleteLogin.removeClass('is-visible');
-  }
+  // // Check if the cookie exists.
+  // if ($.cookie('cookie_redirect') !== undefined ) {
+    // saveLogin.removeClass('is-visible');
+    // deleteLogin.toggleClass('is-visible');
+  // } else {
+    // saveLogin.toggleClass('is-visible');
+    // deleteLogin.removeClass('is-visible');
+  // }
+
+  var cookieExists = $.cookie('cookie_redirect') !== undefined;
+
+  $('.js-delete-login-choice').toggleClass('is-visible', cookieExists);
+  $('.js-save-login-choice').toggleClass('is-visible', !cookieExists);
+
 }
 
 /**
