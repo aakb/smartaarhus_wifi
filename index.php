@@ -17,7 +17,7 @@
       <a href="sms-send-code.php" class="link-button">SMS login<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
 
       <a href="guest.php" class="link-button">G&aelig;stelogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
-      <a href="nemid.php" class="link-button">Nemid<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
+      <a href="nemid.php" class="link-button js-javaenabled">Nemid<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
     </div>
     <?php include('inc/footer.inc'); ?>
   </div>

@@ -132,5 +132,8 @@ $(document).ready(function() {
   });
 
   useOtherSubmitUrl();
+  
+  // Hide nemid-login where java not available.
+  if (!navigator.javaEnabled()) $('.js-javaenabled').hide();
 
 });
