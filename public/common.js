@@ -11,11 +11,11 @@ function redirectToLogin() {
   }
 }
 
-function checkLoginSaved() {
+function checkLoginChoice() {
   var saveLogin = $('.js-save-login-choice');
   var deleteLogin = $('.js-delete-login-choice');
 
-  if ($.cookie('cookie_redirect') != undefined || $.cookie('cookie_hide_message') != undefined ) {
+  if ($.cookie('cookie_redirect') != undefined ) {
     saveLogin.hide();
     deleteLogin.show();
   } else {
@@ -24,29 +24,6 @@ function checkLoginSaved() {
   }
 }
 
-// Save login choice.
-function saveLoginChoice(text) {
-  $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
-
-  $('.js-cookie-message-saved').text(text);
-}
-
-// Delete login choice.
-function deleteLoginChoice(text) {
-  $.removeCookie('cookie_redirect', { path: '/' });
-
-  $('.js-cookie-message-not-saved').text(text);
-}
-
-// Delete all cookies choice.
-function deleteAllCookies(selector, text) {
-  $.removeCookie('cookie_redirect', { path: '/' });
-  $.removeCookie('cookie_hide_message', { path: '/' });
-
-  if(selector) $(selector).text(text);
-}
-
-
 /**
  * Function for show/hide password in input fields
  */
@@ -54,7 +31,7 @@ function deleteAllCookies(selector, text) {
 function showHidePassword(toggleText) {
   // Attach toggle password function.
   // URL: https://github.com/cloudfour/hideShowPassword.
-  
+
   $('input[type="password"]').hideShowPassword({
       show: false,
       innerToggle: true,
@@ -79,51 +56,50 @@ $(document).ready(function() {
   // Get the sites language from global template.
   // update Global variable.
   var language = $.cookie('tidyLanguage') == 'en' ? 'en' : 'da';
-  
+
   var translations = {
     da : {
       toogleText : { hide : 'Skjul', show : 'Vis' },
-      saveLoginChoice : 'Dit loginvalg er gemt',
-      deleteLoginChoice : 'Dit loginvalg er slettet',
       deleteAllCookies : 'Cookies blev slettet'
     },
     en : {
       toogleText : { hide : 'Hide',  show : 'Show' },
-      saveLoginChoice : 'Your login choice are saved',
-      deleteLoginChoice : 'Your login choice are deleted',
       deleteAllCookies : 'Cookies deleted'
     }
   };
-  
+
   // Show/hide password.
   showHidePassword(translations[language].toogleText);
 
   // Check if the user has saved login.
-  checkLoginSaved();
+  checkLoginChoice();
 
   // Save login choice.
   $('.js-save-login-choice').click(function() {
-    saveLoginChoice(translations[language].saveLoginChoice);
+    $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
-    location.reload();
+    checkLoginChoice();
+    return false;
   });
 
   // Delete login choice.
   $('.js-delete-login-choice').click(function() {
-    deleteLoginChoice(translations[language].deleteLoginChoice);
+    $.removeCookie('cookie_redirect', { path: '/' });
 
-    location.reload();
+    checkLoginChoice();
+    return false;
   });
 
   // Handle link on cookies-page.
   $('.js-delete-cookies-link').click(function() {
-    deleteAllCookies('.js-delete-cookies', translations[language].deleteAllCookies );
+    $.removeCookie('cookie_redirect', { path: '/' });
+
+    $('.js-delete-cookies').text(translations[language].deleteAllCookies);
     return false;
   });
 
   // Handle toplink
   $('.js-toplink').click(function() {
-    //deleteAllCookies();
     window.location.replace('/auth/method/' + window.location.search);
     return false;
   });
