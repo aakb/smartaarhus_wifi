@@ -106,7 +106,8 @@ $(document).ready(function() {
 
   // Handle toplink
   $('.js-toplink').click(function() {
-    window.location.replace('/auth/method/' + window.location.search);
+    //window.location.replace('/auth/method/' + window.location.search);
+    history.back(1);
     return false;
   });
   
