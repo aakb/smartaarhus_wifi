@@ -71,7 +71,9 @@ function useOtherSubmitUrl() {
          window.location.replace(respdata.redirect);
       }
      }).fail(function(respdata) {
-      $('.js-message').html(respdata.responseJSON.message).addClass('message--error');
+
+     $('.js-message').html(respdata.responseJSON.message).addClass('message--error');
+
     });
   });
 }
@@ -93,11 +95,13 @@ $(document).ready(function() {
   var translations = {
     da : {
       toogleText : { hide : 'Skjul', show : 'Vis' },
-      deleteAllCookies : 'Cookies blev slettet'
+      deleteAllCookies : 'Cookies blev slettet',
+      loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.'
     },
     en : {
       toogleText : { hide : 'Hide',  show : 'Show' },
-      deleteAllCookies : 'Cookies deleted'
+      deleteAllCookies : 'Cookies deleted',
+      loginSaved : 'You will be redirected to this page the next time you login.'
     }
   };
 
@@ -110,6 +114,10 @@ $(document).ready(function() {
   // Save login choice.
   $('.js-save-login-choice').click(function() {
     $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
+
+    $('.js-message').html('<p>' + translations[language].loginSaved + '</p>').addClass('message--success');
+
+    $('.js-message').delay(4500).fadeOut();
 
     checkLoginChoice();
     return false;
