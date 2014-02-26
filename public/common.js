@@ -50,7 +50,7 @@ function showHidePassword(toggleText) {
   });
 }
 
-function useOtherSubmitUrl(errorTextMissingValues) {
+function useOtherSubmitUrl(errorTextMissingValues, buttonLoadingText) {
 
   // Activate only on pages with js-message class
   if (!$('.js-message').length) {
@@ -65,9 +65,11 @@ function useOtherSubmitUrl(errorTextMissingValues) {
     var postdata = $(this).serializeArray();
     var url = $(this).attr('action').replace('/action/', '/=/logon/');
     var button = $('.button', this);
+    var buttonDefaultText = button.val();
 
     // Disable button on submit.
     button.prop('disabled', true);
+    button.val(buttonLoadingText);
 
      // Send the data using post.
     $.post(url, postdata, 'json').done(function(respdata) {
@@ -80,6 +82,7 @@ function useOtherSubmitUrl(errorTextMissingValues) {
     }).always(function() {
       // Enable button on submit.
       button.prop('disabled', false);
+      button.val(buttonDefaultText);
     });
   });
 }
@@ -104,14 +107,16 @@ $(document).ready(function() {
       deleteAllCookies : 'Cookies blev slettet',
       loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
       loginDeleted : 'Dit valg er slettet.',
-      missingValues : 'Udfyld venligst begge felter.'
+      missingValues : 'Udfyld venligst begge felter.',
+      buttonLoadingText : 'Logger ind...'
     },
     en : {
       toogleText : { hide : 'Hide',  show : 'Show' },
       deleteAllCookies : 'Cookies deleted',
       loginSaved : 'You will be redirected to this page the next time you login.',
       loginDeleted : 'Your choice is removed.',
-      missingValues : 'Please enter username and password.'
+      missingValues : 'Please enter username and password.',
+      buttonLoadingText : 'Logging in...'
     }
   };
 
@@ -152,7 +157,7 @@ $(document).ready(function() {
   });
 
   // Handle submit via alternativ channel.
-  useOtherSubmitUrl(translations[language].missingValues);
+  useOtherSubmitUrl(translations[language].missingValues, translations[language].buttonLoadingText);
 
   // Hide nemid-login where java not available.
   if (!navigator.javaEnabled()) {
