@@ -8,12 +8,7 @@
 
 <?php include('inc/header.inc'); ?>
 <div class="layout">
-  <h1>Employee login - english version</h1>
-  <div class="message--cookie js-cookie-message">
-    <p class="message--cookie-saved js-cookie-message-saved">Do you wish to be forwarded to this page the next time you log in? <a href="#" class="js-save-login-choice">Yes, save my login choice</a></p>
-    <p class="message--cookie-not-saved js-cookie-message-not-saved">Your login choice has been saved. <a href="#" class="js-delete-login-choice">Delete login choice</a></p>
-    <a href="#" class="js-hide-message">Do not show this message again</a>
-  </div>
+  <h1>Employee login<span class="saved-login--link js-save-login-choice js-login-choice">(<a href="#">Remember my choice</a>)</span><span class="saved-login--link js-delete-login-choice">(<a href="#">Forget my choice</a>)</span></h1>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">AZ-ident</label>
