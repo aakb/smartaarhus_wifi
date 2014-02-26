@@ -11,10 +11,10 @@
   <h1>Your are now online</h1>
   <p>This session expires %TIDY[expire_time], after that time you will be asked to re-authenticate.</p>
 
-  %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]  <div class="message--success">
-  %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]    <p>You will be forwarded to your original destination in five seconds.</p>
-  %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]    <p><a href="%TIDY[intercept_uri]">%TIDY[intercept_uri_nice]</a></p>
-  %TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]  </div>
+%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]  <div class="message--success">
+%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]    <p>You will be forwarded to your original destination in five seconds.</p>
+%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]    <p><a href="%TIDY[intercept_uri]">%TIDY[intercept_uri_nice]</a></p>
+%TIDY_DEP[redirect] %TIDY_IFDEF[intercept_uri]  </div>
 
   <h3>Security on the network</h3>
   <p>Please read this before you start using the wireless network This is an open network - It is possible for others to see and access your equipment on this Hotspot.</p>
