@@ -7,12 +7,12 @@
 
 %message-green {
   background-color: $green;
-  color: darken($green, 50%);
+  color: $white;
 }
 
 %message-red {
   background-color: $red;
-  color: darken($red, 40%);
+  color: $white;
 
   a:link {
     color: lighten($red, 30%);
@@ -32,7 +32,7 @@
 
 %message-yellow {
   background-color: $yellow;
-  color: darken($yellow, 40%);
+  color: $white;
 }
 
 .message {

@@ -394,13 +394,13 @@
 /* line 8, ../sass/theme/_messages.scss */
 .message--success {
   background-color: #b9ff73;
-  color: #3a7300;
+  color: white;
 }
 
 /* line 13, ../sass/theme/_messages.scss */
 .message--error {
   background-color: #ff6138;
-  color: #6b1600;
+  color: white;
 }
 /* line 17, ../sass/theme/_messages.scss */
 .message--error a:link {
@@ -421,7 +421,7 @@
 /* line 33, ../sass/theme/_messages.scss */
 .message--warning {
   background-color: #f8b634;
-  color: #5d3f03;
+  color: white;
 }
 
 /* line 38, ../sass/theme/_messages.scss */
