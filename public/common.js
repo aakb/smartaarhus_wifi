@@ -96,12 +96,14 @@ $(document).ready(function() {
     da : {
       toogleText : { hide : 'Skjul', show : 'Vis' },
       deleteAllCookies : 'Cookies blev slettet',
-      loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.'
+      loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
+      loginDeleted : 'Dit valg er slettet.'
     },
     en : {
       toogleText : { hide : 'Hide',  show : 'Show' },
       deleteAllCookies : 'Cookies deleted',
-      loginSaved : 'You will be redirected to this page the next time you login.'
+      loginSaved : 'You will be redirected to this page the next time you login.',
+      loginDeleted : 'Your choice is removed.'
     }
   };
 
@@ -115,9 +117,9 @@ $(document).ready(function() {
   $('.js-save-login-choice').click(function() {
     $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
-    $('.js-message').html('<p>' + translations[language].loginSaved + '</p>').addClass('message--success');
+    $('.js-message').html('<p>' + translations[language].loginSaved + '</p>').addClass('message--success').show();
 
-    $('.js-message').delay(4500).fadeOut();
+    $('.js-message').delay(5000).fadeOut();
 
     checkLoginChoice();
     return false;
@@ -126,6 +128,10 @@ $(document).ready(function() {
   // Delete login choice.
   $('.js-delete-login-choice').click(function() {
     $.removeCookie('cookie_redirect', { path: '/' });
+
+    $('.js-message').html('<p>' + translations[language].loginDeleted + '</p>').addClass('message--success').show();
+
+    $('.js-message').delay(5000).fadeOut();
 
     checkLoginChoice();
     return false;
