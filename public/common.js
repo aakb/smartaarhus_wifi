@@ -96,14 +96,6 @@ $(document).ready(function() {
     return false;
   });
 
-  // Handle link on cookies-page.
-  $('.js-delete-cookies-link').click(function() {
-    $.removeCookie('cookie_redirect', { path: '/' });
-
-    $('.js-delete-cookies').text(translations[language].deleteAllCookies);
-    return false;
-  });
-
   // Handle toplink
   $('.js-toplink').click(function() {
     //window.location.replace('/auth/method/' + window.location.search);
