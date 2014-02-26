@@ -83,6 +83,7 @@ function useOtherSubmitUrl(errorTextMissingValues, buttonLoadingText) {
       // Enable button on submit.
       button.prop('disabled', false);
       button.val(buttonDefaultText);
+      $('#username').focus();
     });
   });
 }
