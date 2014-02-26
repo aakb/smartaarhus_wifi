@@ -394,7 +394,7 @@
 /* line 8, ../sass/theme/_messages.scss */
 .message--success {
   background-color: #b9ff73;
-  color: white;
+  color: #3a7300;
 }
 
 /* line 13, ../sass/theme/_messages.scss */
@@ -421,7 +421,7 @@
 /* line 33, ../sass/theme/_messages.scss */
 .message--warning {
   background-color: #f8b634;
-  color: white;
+  color: #5d3f03;
 }
 
 /* line 38, ../sass/theme/_messages.scss */

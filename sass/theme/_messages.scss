@@ -7,7 +7,7 @@
 
 %message-green {
   background-color: $green;
-  color: $white;
+  color: darken($green, 50%);
 }
 
 %message-red {
@@ -32,7 +32,7 @@
 
 %message-yellow {
   background-color: $yellow;
-  color: $white;
+  color: darken($yellow, 40%);
 }
 
 .message {
