@@ -62,8 +62,12 @@ function useOtherSubmitUrl() {
     // Stop form from submitting normally
     event.preventDefault();
 
-    var postdata = $(this).serializeArray();
+    // The action are composed by from the existing action-url.
     var url = $(this).attr('action').replace('/action/', '/=/logon/');
+
+    // Serialize data.
+    var postdata = $(this).serializeArray();
+
     var button = $('.button', this);
     var buttonDefaultText = button.val();
 
@@ -73,16 +77,19 @@ function useOtherSubmitUrl() {
 
      // Send the data using post.
     $.post(url, postdata, 'json').done(function(respdata) {
+      // Success - do the redirect.
       if (respdata.authenticated && respdata.redirect) {
          window.location.replace(respdata.redirect);
       }
     }).fail(function(respdata) {
+      // Fail - show errortext if valid.
       var text = respdata.responseJSON.message ? respdata.responseJSON.message : translationStrings.missingValues;
       $('.js-message').html(text).addClass('message--error');
     }).always(function() {
-      // Enable button on submit.
+      // Enable button after submit.
       button.prop('disabled', false);
       button.val(buttonDefaultText);
+      // Set focus on first input-element.
       $('#username').focus();
     });
   });
@@ -109,7 +116,7 @@ $(document).ready(function() {
   $('form').h5Validate();
 
   // Get the sites language from global template and update global variable.
-  translationStrings = $.cookie('tidyLanguage') === 'en' ? 
+  translationStrings = $.cookie('tidyLanguage') === 'en' ?
     {
       toogleText : { hide : 'Hide',  show : 'Show' },
       deleteAllCookies : 'Cookies deleted',
@@ -117,7 +124,7 @@ $(document).ready(function() {
       loginDeleted : 'Your choice is removed.',
       missingValues : 'Please enter username and password.',
       buttonLoadingText : 'Logging in...'
-    } : 
+    } :
     {
       toogleText : { hide : 'Skjul', show : 'Vis' },
       deleteAllCookies : 'Cookies blev slettet',
