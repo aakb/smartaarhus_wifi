@@ -9,6 +9,7 @@
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>Library login</h1>
+  <div class="js-message"></div>  
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">

@@ -50,7 +50,7 @@ function showHidePassword(toggleText) {
   });
 }
 
-function useOtherSubmitUrl() {
+function useOtherSubmitUrl(errorTextMissingValues) {
 
   // Activate only on pages with js-message class
   if (!$('.js-message').length) {
@@ -70,10 +70,9 @@ function useOtherSubmitUrl() {
       if (respdata.authenticated && respdata.redirect) {
          window.location.replace(respdata.redirect);
       }
-     }).fail(function(respdata) {
-
-     $('.js-message').html(respdata.responseJSON.message).addClass('message--error');
-
+    }).fail(function(respdata) {
+      var text = respdata.responseJSON.message ? respdata.responseJSON.message : errorTextMissingValues;
+      $('.js-message').html(text).addClass('message--error');
     });
   });
 }
@@ -97,13 +96,15 @@ $(document).ready(function() {
       toogleText : { hide : 'Skjul', show : 'Vis' },
       deleteAllCookies : 'Cookies blev slettet',
       loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
-      loginDeleted : 'Dit valg er slettet.'
+      loginDeleted : 'Dit valg er slettet.',
+      missingValues : 'Udfyld venligst begge felter.'
     },
     en : {
       toogleText : { hide : 'Hide',  show : 'Show' },
       deleteAllCookies : 'Cookies deleted',
       loginSaved : 'You will be redirected to this page the next time you login.',
-      loginDeleted : 'Your choice is removed.'
+      loginDeleted : 'Your choice is removed.',
+      missingValues : 'Please enter username and password.'
     }
   };
 
@@ -117,7 +118,7 @@ $(document).ready(function() {
   $('.js-save-login-choice').click(function() {
     $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
-    $('.js-message').html('<p>' + translations[language].loginSaved + '</p>').addClass('message--success').show();
+    $('.js-message').html(translations[language].loginSaved).addClass('message--success').show();
 
     $('.js-message').delay(5000).fadeOut();
 
@@ -129,7 +130,7 @@ $(document).ready(function() {
   $('.js-delete-login-choice').click(function() {
     $.removeCookie('cookie_redirect', { path: '/' });
 
-    $('.js-message').html('<p>' + translations[language].loginDeleted + '</p>').addClass('message--success').show();
+    $('.js-message').html(translations[language].loginDeleted).addClass('message--success').show();
 
     $('.js-message').delay(5000).fadeOut();
 
@@ -143,8 +144,9 @@ $(document).ready(function() {
     return false;
   });
 
-  useOtherSubmitUrl();
-  
+  // Handle submit via alternativ channel.
+  useOtherSubmitUrl(translations[language].missingValues);
+
   // Hide nemid-login where java not available.
   if (!navigator.javaEnabled()) {
     $('.js-javaenabled').hide();

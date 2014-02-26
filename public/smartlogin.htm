@@ -54,7 +54,8 @@ function useOtherSubmitUrl() {
           }       
      })
     .fail(function(respdata) {
-        $('.js-message').html('<h2>FEJL</h2>' + respdata.responseJSON.message).addClass('message--error')
+        var text = respdata.responseJSON.message ? respdata.responseJSON.message : 'Begge felter skal begge være oplyst.';
+        $('.js-message').html(text).addClass('message--error')
         
     })
   });
