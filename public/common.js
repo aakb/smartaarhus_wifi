@@ -50,7 +50,7 @@ function showHidePassword(toggleText) {
   });
 }
 
-function useOtherSubmitUrl() {
+function useOtherSubmitUrl(errorTextMissingValues) {
 
   // Activate only on pages with js-message class
   if (!$('.js-message').length) {
@@ -71,7 +71,8 @@ function useOtherSubmitUrl() {
          window.location.replace(respdata.redirect);
       }
      }).fail(function(respdata) {
-      $('.js-message').html(respdata.responseJSON.message).addClass('message--error');
+      var text = respdata.responseJSON.message ? respdata.responseJSON.message : errorTextMissingValues;
+      $('.js-message').html(text).addClass('message--error');
     });
   });
 }
@@ -93,11 +94,13 @@ $(document).ready(function() {
   var translations = {
     da : {
       toogleText : { hide : 'Skjul', show : 'Vis' },
-      deleteAllCookies : 'Cookies blev slettet'
+      deleteAllCookies : 'Cookies blev slettet',
+      missingValues : 'Udfyld venligst begge felter'
     },
     en : {
       toogleText : { hide : 'Hide',  show : 'Show' },
-      deleteAllCookies : 'Cookies deleted'
+      deleteAllCookies : 'Cookies deleted',
+      missingValues : 'Please enter username and password'
     }
   };
 
@@ -129,8 +132,9 @@ $(document).ready(function() {
     return false;
   });
 
-  useOtherSubmitUrl();
-  
+  // Handle submit via alternativ channel.
+  useOtherSubmitUrl(translations[language].missingValues);
+
   // Hide nemid-login where java not available.
   if (!navigator.javaEnabled()) {
     $('.js-javaenabled').hide();
