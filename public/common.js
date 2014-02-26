@@ -130,9 +130,12 @@ $(document).ready(function() {
   $('.js-save-login-choice').click(function() {
     $.cookie('cookie_redirect', window.location.pathname, { expires: 30, path: '/' });
 
-    $('.js-message').html(translations[language].loginSaved).addClass('message--success').show();
-
-    $('.js-message').delay(5000).fadeOut();
+    $('.js-save-login-message')
+      .html(translations[language].loginSaved)
+      .addClass('message--success')
+      .show()
+      .delay(5000)
+      .fadeOut(500);
 
     checkLoginChoice();
     return false;
@@ -142,9 +145,12 @@ $(document).ready(function() {
   $('.js-delete-login-choice').click(function() {
     $.removeCookie('cookie_redirect', { path: '/' });
 
-    $('.js-message').html(translations[language].loginDeleted).addClass('message--success').show();
-
-    $('.js-message').delay(5000).fadeOut();
+    $('.js-save-login-message')
+      .html(translations[language].loginDeleted)
+      .addClass('message--success')
+      .show()
+      .delay(5000)
+      .fadeOut(500);
 
     checkLoginChoice();
     return false;

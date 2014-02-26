@@ -10,6 +10,7 @@
 <div class="layout">
   <h1>Employee login<span class="saved-login--link js-save-login-choice js-login-choice">(<a href="#">Remember my choice</a>)</span><span class="saved-login--link js-delete-login-choice">(<a href="#">Forget my choice</a>)</span></h1>
   <div class="js-message"></div>  
+  <div class="js-save-login-message"></div>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <label for="username">AZ-ident</label>
