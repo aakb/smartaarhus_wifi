@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Library login - english version</title>
+  <title>Library login</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

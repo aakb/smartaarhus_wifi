@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nemid - english version</title>
+  <title>Nemid</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

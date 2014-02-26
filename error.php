@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Brug af cookies</title>
+  <title>Fejl</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SMS login - english version</title>
+  <title>SMS login</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Error - english version</title>
+  <title>Error</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>School login - english version</title>
+  <title>School login</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

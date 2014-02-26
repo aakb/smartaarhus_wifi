@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Employee login - english version</title>
+  <title>Employee login</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

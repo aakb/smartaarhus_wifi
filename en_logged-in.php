@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Logged in - english version</title>
+  <title>Logged in</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

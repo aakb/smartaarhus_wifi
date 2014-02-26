@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Guest login - english version</title>
+  <title>Guest login</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 <body>

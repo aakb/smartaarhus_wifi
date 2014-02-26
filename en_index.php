@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>SmartAarhus WIFI - english version</title>
+  <title>SmartAarhus WIFI</title>
   <?php include('inc/meta.inc'); ?>
 </head>
 
