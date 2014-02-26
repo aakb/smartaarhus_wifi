@@ -179,6 +179,7 @@
 
   &.is-visible {
     display: inline-block;
+    width: 100%;
   }
 
   @include breakpoint(24em) {
