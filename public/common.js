@@ -35,7 +35,9 @@ function showHidePassword(toggleText) {
   // URL: https://github.com/cloudfour/hideShowPassword.
   
   // Handle IE 8 in a simple way - we can't do this hide/show-thing.
-  if ( document.documentMode < 9 ) return;
+  if ( document.documentMode < 9 ) {
+    return;
+  }
 
   $('input[type="password"]').hideShowPassword({
       show: false,
