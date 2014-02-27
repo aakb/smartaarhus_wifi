@@ -85,12 +85,12 @@
 
 /* line 51, ../sass/theme/_buttons.scss */
 .button-small {
-  width: 35%;
+  width: 50%;
 }
 @media only screen and (min-width: 45em) {
   /* line 51, ../sass/theme/_buttons.scss */
   .button-small {
-    width: 50%;
+    width: 35%;
   }
 }
 

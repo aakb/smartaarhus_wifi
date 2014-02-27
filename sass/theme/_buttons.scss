@@ -51,9 +51,9 @@
 .button-small {
   @extend .button;
 
-  width: 35%;
+  width: 50%;
 
   @include breakpoint(45em) {
-    width: 50%;
+    width: 35%;
   }
 }
