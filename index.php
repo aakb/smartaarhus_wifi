@@ -9,7 +9,8 @@
 <div class="front">
   <?php include('inc/header.inc'); ?>
   <div class="layout">
-    <h1>Vælg login</h1>
+    <h1>Log ind</h1>
+    <p class="page-content">Du skal logge ind for at benytte dig af gratis WIFI fra Smart Aarhus.</p>
     <div class="link-button--wrapper">
       <a href="bibliotekslogin.php" class="link-button">Bibliotekslogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
       <a href="skolelogin.php" class="link-button">Skolelogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
