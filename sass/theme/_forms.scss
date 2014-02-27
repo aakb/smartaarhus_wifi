@@ -28,18 +28,20 @@
 
 .form--toggle-password {
   position: absolute;
-  // Override inline styling.
-  right: 1em !important;
+  right: .05em !important;
 
-  min-height: 1.25em;
+  min-height: 3.5em;
+  padding-right: 1em;
   padding-left: 2.75em;
 
-  background: $white url('/public/eye.png') no-repeat 0.5em .25em;
+  background: $white url('/public/eye.png') no-repeat 0.5em 1.25em;
   color: $gray;
   cursor: pointer;
   font-size: 75%;
+  line-height: 3.5em;
 
   @include background-size(1.5em);
+  @include border-radius(0 .75em .75em 0);
 }
 
 .form--new-code {
