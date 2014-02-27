@@ -9,6 +9,7 @@
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>G&aelig;stelogin</h1>
+  <div class="js-message"></div>
   <p class="page-content">Gæstelogin udleveres ved skranken/receptionen.</p>    
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
