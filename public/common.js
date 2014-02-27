@@ -13,20 +13,11 @@ function redirectToLogin() {
 
 // Check if the user has saved a login choice.
 function checkLoginChoice() {
-  // var saveLogin = $('.js-save-login-choice');
-  // var deleteLogin = $('.js-delete-login-choice');
 
-  // // Check if the cookie exists.
-  // if ($.cookie('cookie_redirect') !== undefined ) {
-    // saveLogin.removeClass('is-visible');
-    // deleteLogin.toggleClass('is-visible');
-  // } else {
-    // saveLogin.toggleClass('is-visible');
-    // deleteLogin.removeClass('is-visible');
-  // }
-
+  // Check cookie.
   var cookieExists = $.cookie('cookie_redirect') !== undefined;
 
+  // Show the correct box.
   $('.js-delete-login-choice').toggleClass('is-visible', cookieExists);
   $('.js-save-login-choice').toggleClass('is-visible', !cookieExists);
 
@@ -56,51 +47,9 @@ function showHidePassword() {
   });
 }
 
-function useOtherSubmitUrl() {
-
-  // Activate only on pages with js-message class
-  if (!$('.js-message').length) {
-    return;
-  }
-
-  $('form').submit(function(event) {
-
-    // Stop form from submitting normally
-    event.preventDefault();
-
-    // The action are composed by from the existing action-url.
-    var url = $(this).attr('action').replace('/action/', '/=/logon/');
-
-    // Serialize data.
-    var postdata = $(this).serializeArray();
-
-    var button = $('.button', this);
-    var buttonDefaultText = button.val();
-
-    // Disable button on submit.
-    button.prop('disabled', true);
-    button.val(translationStrings.buttonLoadingText);
-
-     // Send the data using post.
-    $.post(url, postdata, 'json').done(function(respdata) {
-      // Success - do the redirect.
-      if (respdata.authenticated && respdata.redirect) {
-         window.location.replace(respdata.redirect);
-      }
-    }).fail(function(respdata) {
-      // Fail - show errortext if valid.
-      var text = respdata.responseJSON.message ? respdata.responseJSON.message : translationStrings.missingValues;
-      $('.js-message').html(text).addClass('message--error');
-    }).always(function() {
-      // Enable button after submit.
-      button.prop('disabled', false);
-      button.val(buttonDefaultText);
-      // Set focus on first input-element.
-      $('#username').focus();
-    });
-  });
-}
-
+/**
+ * Function for show/hide message for login choice.
+ */
 function showLoginMessage(text){
   $('.js-save-login-message')
     .html(text)
@@ -108,6 +57,51 @@ function showLoginMessage(text){
     .show()
     .delay(5000)
     .fadeOut(500);
+}
+
+function useOtherSubmitUrl() {
+
+  $('form').submit(function(event) {
+
+    // Stop form from submitting normally
+    event.preventDefault();
+
+    // Save the form
+    form = $(this);
+
+    // The action are composed from the existing action-url.
+    var url = form.attr('action').replace('/action/', '/=/logon/');
+
+    // Serialize data.
+    var postdata = form.serializeArray();
+
+    var button = $('.button', form);
+    var buttonDefaultText = button.val();
+
+    // Disable button on submit.
+    button.prop('disabled', true);
+    button.val(translationStrings.buttonLoadingText);
+
+     // Send the data using post.
+    $.post(url, postdata, 'json').done(function(data) {
+      // Success - do the redirect.
+      if (data.authenticated && data.redirect) {
+         window.location.replace(data.redirect);
+      }
+    }).fail(function(jqXHR) {
+      // Fail - show errortext if valid.
+      var text = jqXHR.responseJSON.message ? jqXHR.responseJSON.message : translationStrings.missingValues;
+      $('.js-message').html(text).addClass('message--error');
+    }).always(function() {
+
+      // Enable button after submit.
+      button.prop('disabled', false);
+      button.val(buttonDefaultText);
+
+      // Set focus on first input-element.
+      $('#username').focus();
+    });
+  });
 }
 
 var translationsStrings = {};
@@ -168,10 +162,12 @@ $(document).ready(function() {
     return false;
   });
 
-  // Handle submit via alternativ channel.
-  useOtherSubmitUrl();
+  // Handle submit via alternativ channel but only if page has js-message class.
+  if ($('.js-message').length) {
+    useOtherSubmitUrl();
+  }
 
-  // Hide nemid-login where java not available.
+  // Hide nemid-login where java not available. Not usable on some mobile devices.
   if (!navigator.javaEnabled()) {
     $('.js-javaenabled').hide();
   }
