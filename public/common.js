@@ -32,7 +32,7 @@ function showHidePassword() {
   // URL: https://github.com/cloudfour/hideShowPassword.
 
   // Handle IE 8 in a simple way - we can't do this hide/show-thing.
-  if ( document.documentMode < 9 ) {
+  if (document.documentMode < 9) {
     return;
   }
 
@@ -50,7 +50,7 @@ function showHidePassword() {
 /**
  * Function for show/hide message for login choice.
  */
-function showLoginMessage(text){
+function showLoginMessage(text) {
   $('.js-save-login-message')
     .html(text)
     .addClass('message--success')
@@ -67,7 +67,7 @@ function useOtherSubmitUrl() {
     event.preventDefault();
 
     // Save the form
-    form = $(this);
+    var form = $(this);
 
     // The action are composed from the existing action-url.
     var url = form.attr('action').replace('/action/', '/=/logon/');
