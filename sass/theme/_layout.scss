@@ -143,12 +143,14 @@
   max-width: 4em;
 }
 
+
 .back-link {
   display: block;
   max-width: 1em;
 }
 
-.frontpage {
+.frontpage,
+.back-link-hidden {
   .back-link {
     display: none;
   }

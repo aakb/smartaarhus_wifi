@@ -156,11 +156,17 @@ $(document).ready(function() {
     return false;
   });
 
+  console.log(history.length);
+
   // Handle toplink
-  $('.js-toplink').click(function() {
-    history.back(1);
-    return false;
-  });
+  if (history.length == 1) {
+    $('body').addClass('back-link-hidden');
+  } else {
+    $('.js-toplink').click(function() {
+      history.back(1);
+      return false;
+    });
+  }
 
   // Handle submit via alternativ channel but only if page has js-message class.
   if ($('.js-message').length) {

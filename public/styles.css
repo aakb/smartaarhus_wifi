@@ -235,23 +235,25 @@
   max-width: 4em;
 }
 
-/* line 146, ../sass/theme/_layout.scss */
+/* line 147, ../sass/theme/_layout.scss */
 .back-link {
   display: block;
   max-width: 1em;
 }
 
-/* line 152, ../sass/theme/_layout.scss */
-.frontpage .back-link {
+/* line 154, ../sass/theme/_layout.scss */
+.frontpage .back-link,
+.back-link-hidden .back-link {
   display: none;
 }
-/* line 156, ../sass/theme/_layout.scss */
-.frontpage .logo--wrapper {
+/* line 158, ../sass/theme/_layout.scss */
+.frontpage .logo--wrapper,
+.back-link-hidden .logo--wrapper {
   left: 0;
 }
 
 /* Layout */
-/* line 164, ../sass/theme/_layout.scss */
+/* line 166, ../sass/theme/_layout.scss */
 .layout {
   padding-right: 2em;
   padding-bottom: 3em;
@@ -259,35 +261,35 @@
 }
 
 /* Saved login */
-/* line 175, ../sass/theme/_layout.scss */
+/* line 177, ../sass/theme/_layout.scss */
 .saved-login--link {
   display: none;
   font-size: .5em;
 }
-/* line 180, ../sass/theme/_layout.scss */
+/* line 182, ../sass/theme/_layout.scss */
 .saved-login--link.is-visible {
   display: block;
 }
 @media only screen and (min-width: 24em) {
-  /* line 175, ../sass/theme/_layout.scss */
+  /* line 177, ../sass/theme/_layout.scss */
   .saved-login--link {
     position: absolute;
     margin-top: .75em;
     margin-left: .5em;
   }
-  /* line 190, ../sass/theme/_layout.scss */
+  /* line 192, ../sass/theme/_layout.scss */
   .saved-login--link.is-visible {
     display: inline-block;
   }
 }
 
 /* Footer */
-/* line 199, ../sass/theme/_layout.scss */
+/* line 201, ../sass/theme/_layout.scss */
 .footer {
   text-align: center;
 }
 
-/* line 203, ../sass/theme/_layout.scss */
+/* line 205, ../sass/theme/_layout.scss */
 .footer--language {
   margin-left: 1em;
 }
