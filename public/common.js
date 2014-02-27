@@ -64,8 +64,8 @@ function useOtherSubmitUrl() {
   $('form').submit(function(event) {
 
     // Use h5Validate-functionality
-    if (!$('#form').h5Validate('allValid')) {
-       return false;
+    if (!$('form').h5Validate('allValid')) {
+      return false;
     }
 
     // Stop form from submitting normally
