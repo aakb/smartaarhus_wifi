@@ -121,7 +121,7 @@ $(document).ready(function() {
       toogleText : { hide : 'Hide',  show : 'Show' },
       deleteAllCookies : 'Cookies deleted',
       loginSaved : 'You will be redirected to this page the next time you login.',
-      loginDeleted : 'Your choice is removed.',
+      loginDeleted : 'You will no longer be redirected to this page.',
       missingValues : 'Please enter username and password.',
       buttonLoadingText : 'Logging in...'
     } :
@@ -129,7 +129,7 @@ $(document).ready(function() {
       toogleText : { hide : 'Skjul', show : 'Vis' },
       deleteAllCookies : 'Cookies blev slettet',
       loginSaved : 'Du vil blive viderestillet til denne side næste gang du logger ind.',
-      loginDeleted : 'Dit valg er glemt.',
+      loginDeleted : 'Du vil ikke længere blive viderestillet til denne side.',
       missingValues : 'Udfyld venligst begge felter.',
       buttonLoadingText : 'Logger ind...'
     };
