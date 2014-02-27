@@ -14,6 +14,7 @@
     <div class="link-button--wrapper">
       <p><a target="tabs" href="http://nwa-demo.netic.dk/">Test</a>
       <p><a target="tabs" href="http://nwa-demo.netic.dk/auth/method/?intercept_uri=687474703A2F2F7777772E6F6461612E646B2F">Test med intercepturi</a>
+      <p><a target="tabs" href="http://nwa-demo.netic.dk/auth/intercept/landing"">Landing</a></p>
     </div>
           <p class="js-delete-cookies"><a href="#" class="js-delete-cookies-link">Slet cookies</a></p>
   </div>
