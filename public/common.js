@@ -161,8 +161,6 @@ $(document).ready(function() {
     return false;
   });
 
-  console.log(history.length);
-
   // Handle toplink
   if (history.length == 1) {
     $('body').addClass('back-link-hidden');
