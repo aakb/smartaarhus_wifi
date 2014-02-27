@@ -37,12 +37,11 @@
    *
    ================================================================================================================== */
 /**
+ *
  * Buttons
  *
- * This is an example file
- *
  */
-/* line 9, ../sass/theme/_buttons.scss */
+/* line 8, ../sass/theme/_buttons.scss */
 .button, .button-small, .link-button {
   display: inline-block;
   font-size: 125%;
@@ -58,12 +57,12 @@
   border-radius: 0.6em;
   text-shadow: 0 0.025em 0 #266eb2;
 }
-/* line 21, ../sass/theme/_buttons.scss */
+/* line 20, ../sass/theme/_buttons.scss */
 .button:focus, .button-small:focus, .link-button:focus, .button:hover, .button-small:hover, .link-button:hover, .button:active, .button-small:active, .link-button:active {
   text-decoration: none;
 }
 
-/* line 29, ../sass/theme/_buttons.scss */
+/* line 28, ../sass/theme/_buttons.scss */
 .button, .button-small, .link-button {
   background-color: #3788d4;
   border: 0;
@@ -73,20 +72,26 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 40, ../sass/theme/_buttons.scss */
+/* line 39, ../sass/theme/_buttons.scss */
 .button:hover, .button-small:hover, .link-button:hover {
   background-color: #2b7bc7;
   color: white;
 }
-/* line 45, ../sass/theme/_buttons.scss */
+/* line 44, ../sass/theme/_buttons.scss */
 .button[disabled], [disabled].button-small, [disabled].link-button {
   background-color: #aaaaaa;
   text-shadow: 0 0.025em 0 #666666;
 }
 
-/* line 52, ../sass/theme/_buttons.scss */
+/* line 51, ../sass/theme/_buttons.scss */
 .button-small {
-  width: 50%;
+  width: 35%;
+}
+@media only screen and (min-width: 45em) {
+  /* line 51, ../sass/theme/_buttons.scss */
+  .button-small {
+    width: 50%;
+  }
 }
 
 /**

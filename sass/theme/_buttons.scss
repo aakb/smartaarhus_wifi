@@ -1,7 +1,6 @@
 /**
- * Buttons
  *
- * This is an example file
+ * Buttons
  *
  */
 
@@ -52,6 +51,9 @@
 .button-small {
   @extend .button;
 
-  width: 50%;
+  width: 35%;
 
+  @include breakpoint(45em) {
+    width: 50%;
+  }
 }
