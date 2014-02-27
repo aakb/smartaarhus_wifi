@@ -9,6 +9,7 @@
 <?php include('inc/header.inc'); ?>
 <div class="layout">
   <h1>Guest login</h1>
+  <p class="page-content">Guest login can be obtained at the counter / reception.</p>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
