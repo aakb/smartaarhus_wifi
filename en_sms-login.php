@@ -12,7 +12,7 @@
   <p class="page-content">Enter your mobile number and you will receive a text message containing a one-time code.</p>
   <div class="form--wrapper">
     <form action="logged-in.php" method="post">
-      <label for="username">Mobilnummer</label>    
+      <label for="username">Mobile number</label>
       <input type="text" value="%TIDY[sms_number]" disabled="disabled" class="form--input" autocomplete="off" required  />      
       <div class="form--password-wrapper">
         <label for="password">Enter code</label>
