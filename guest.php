@@ -15,7 +15,7 @@
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
         <label for="username">Brugernavn</label>
-        <input type="password" placeholder="Indtast dit udleverede brugernavn" id="username" name="username" class="form--input" autocomplete="off" required />
+        <input type="password" placeholder="Indtast dit udleverede brugernavn" id="username" autofocus name="username" class="form--input" autocomplete="off" required />
       </div>
       <div class="form--password-wrapper">
         <label for="password">Kode</label>

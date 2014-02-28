@@ -14,7 +14,7 @@
     <form action="logged-in.php" method="post">
       <div class="form--password-wrapper">
         <label for="username">Borrower ID / CPR number</label>
-        <input type="password" placeholder="Enter your borrower ID or CPR number" id="username" name="username" class="form--input" autocomplete="off" required />
+        <input type="password" placeholder="Enter your borrower ID or CPR number" id="username" autofocus name="username" class="form--input" autocomplete="off" required />
       </div>
       <div class="form--password-wrapper">
         <label for="password">Pincode</label>
