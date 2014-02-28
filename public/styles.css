@@ -273,7 +273,8 @@
 }
 /* line 182, ../sass/theme/_layout.scss */
 .saved-login--link.is-visible {
-  display: block;
+  display: inline-block;
+  min-width: 7.5em;
 }
 @media only screen and (min-width: 24em) {
   /* line 177, ../sass/theme/_layout.scss */
@@ -282,19 +283,15 @@
     margin-top: .75em;
     margin-left: .5em;
   }
-  /* line 192, ../sass/theme/_layout.scss */
-  .saved-login--link.is-visible {
-    display: inline-block;
-  }
 }
 
 /* Footer */
-/* line 201, ../sass/theme/_layout.scss */
+/* line 198, ../sass/theme/_layout.scss */
 .footer {
   text-align: center;
 }
 
-/* line 205, ../sass/theme/_layout.scss */
+/* line 202, ../sass/theme/_layout.scss */
 .footer--language {
   margin-left: 1em;
 }

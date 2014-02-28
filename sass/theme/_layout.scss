@@ -180,7 +180,8 @@
   font-size: .5em;
 
   &.is-visible {
-    display: block;
+    display: inline-block;
+    min-width: 7.5em;
   }
 
   @include breakpoint(24em) {
@@ -188,10 +189,6 @@
 
     margin-top: .75em;
     margin-left: .5em;
-
-    &.is-visible {
-      display: inline-block;
-    }
   }
 }
 
