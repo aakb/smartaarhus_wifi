@@ -45,7 +45,7 @@
     max-width: 100%;
   }
 
-  .aak-logo--wrapper {
+  .logo-aak--wrapper {
     right: 2em;
   }
 
@@ -114,7 +114,7 @@
 
 .back-link--wrapper,
 .logo--wrapper,
-.aak-logo--wrapper {
+.logo-aak--wrapper {
   position: absolute;
 
   height: 3em;
@@ -124,13 +124,13 @@
   left: 2em;
 }
 
-.aak-logo--wrapper {
+.logo-aak--wrapper {
   right: 0;
 }
 
 .back-link,
 .logo,
-.aak-logo {
+.logo-aak {
   @include vertical-align();
 }
 
@@ -139,7 +139,7 @@
   max-width: 10em;
 }
 
-.aak-logo {
+.logo-aak {
   max-width: 4em;
 }
 

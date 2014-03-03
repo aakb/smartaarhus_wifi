@@ -141,7 +141,7 @@
   max-width: 100%;
 }
 /* line 48, ../sass/theme/_layout.scss */
-.map .aak-logo--wrapper {
+.map .logo-aak--wrapper {
   right: 2em;
 }
 /* line 52, ../sass/theme/_layout.scss */
@@ -200,7 +200,7 @@
 /* line 117, ../sass/theme/_layout.scss */
 .back-link--wrapper,
 .logo--wrapper,
-.aak-logo--wrapper {
+.logo-aak--wrapper {
   position: absolute;
   height: 3em;
 }
@@ -211,14 +211,14 @@
 }
 
 /* line 127, ../sass/theme/_layout.scss */
-.aak-logo--wrapper {
+.logo-aak--wrapper {
   right: 0;
 }
 
 /* line 133, ../sass/theme/_layout.scss */
 .back-link,
 .logo,
-.aak-logo {
+.logo-aak {
   position: relative;
   top: 50%;
   vertical-align: baseline;
@@ -236,7 +236,7 @@
 }
 
 /* line 142, ../sass/theme/_layout.scss */
-.aak-logo {
+.logo-aak {
   max-width: 4em;
 }
 
