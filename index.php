@@ -5,7 +5,7 @@
 </head>
 
 <body>
-%TIDY_REGEX[current(cmd),/landing/] <script>redirectToLogin();</script>
+<script>redirectToLogin();</script>
 <div class="front">
   <?php include('inc/header.inc'); ?>
   <div class="layout">
