@@ -17,7 +17,7 @@
 
   <p>Denne session udl&oslash;ber <strong>%TIDY[expire_time]</strong>, herefter vil du igen blive bedt om at logge ind.</p>
   <h3>Sikkerhed p&aring; nettet</h3>
-  <p>Du er logget p&aring; et &aring;bent netv&aelig;rk. Hvis du har aktiveret delingpå dit udstyr, kan det ses af andre p&aring; hotspottet. Du har selv ansvaret for at beskytte dit udstyr.</p>
+  <p>Du er logget p&aring; et &aring;bent netv&aelig;rk. Hvis du har aktiveret deling på dit udstyr, kan det ses af andre p&aring; hotspottet. Du har selv ansvaret for at beskytte dit udstyr.</p>
   <p>Vi g&oslash;r opm&aelig;rksom p&aring;, at din f&aelig;rden p&aring; internettet vil kunne spores tilbage til dig. Efter anmodning fra berettiget myndighed skal vi udlevere oplysning herom.</p>
   <input type="button" value="Log af" class="button-small" onclick="location.href='%TIDY[path_auth]/action/logout';" />
 </div>
