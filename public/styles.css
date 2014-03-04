@@ -379,7 +379,7 @@
 /* line 29, ../sass/theme/_forms.scss */
 .form--toggle-password {
   position: absolute;
-  right: .05em !important;
+  right: 2px !important;
   min-height: 3.5em;
   padding-right: 1em;
   padding-left: 2.75em;
