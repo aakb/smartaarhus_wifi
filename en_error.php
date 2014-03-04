@@ -14,7 +14,7 @@
       <p class="error">%TIDY[error_message]&nbsp;</p>
       <div class="form-wrapper">
         <div class="form-item submit">
-          <input type="button" value="Tilbage" id="submit" onclick="javascript:history.back(1);" />
+          <input type="button" value="Tilbage" id="submit" onclick="javascript:history.back(1);" >
         </div>
       </div>    
     

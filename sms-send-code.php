@@ -13,7 +13,7 @@
   <div class="form--wrapper">
     <form action="sms-login.php" method="post">
       <label for="username">Mobilnummer</label>
-      <input type="number" placeholder="Indtast dit mobilnummer" id="username" autofocus name="username" class="form--input" autocomplete="off" required>
+      <input type="number" placeholder="Indtast dit mobilnummer" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
       <input type="submit" class="button" value="Send SMS">
     </form>
   </div>
