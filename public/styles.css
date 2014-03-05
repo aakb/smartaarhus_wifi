@@ -379,7 +379,7 @@
 /* line 29, ../sass/theme/_forms.scss */
 .form--toggle-password {
   position: absolute;
-  right: .05em !important;
+  right: 2px !important;
   min-height: 3.5em;
   padding-right: 1em;
   padding-left: 2.75em;
@@ -445,21 +445,26 @@
 
 /* line 38, ../sass/theme/_messages.scss */
 .message, .message--success, .message--warning, .message--error {
+  overflow: hidden;
   margin-bottom: 2em;
   padding: 1em 1.5em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-border-radius: 0.6em;
   -moz-border-radius: 0.6em;
   -ms-border-radius: 0.6em;
   -o-border-radius: 0.6em;
   border-radius: 0.6em;
 }
-/* line 44, ../sass/theme/_messages.scss */
+/* line 48, ../sass/theme/_messages.scss */
 .message label, .message--success label, .message--warning label, .message--error label {
   display: inline;
   margin: 0;
   font-weight: bold;
 }
-/* line 51, ../sass/theme/_messages.scss */
+/* line 55, ../sass/theme/_messages.scss */
 .message p:last-child, .message--success p:last-child, .message--warning p:last-child, .message--error p:last-child {
   margin-bottom: 0;
 }
