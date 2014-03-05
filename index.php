@@ -20,10 +20,9 @@ $mapping  = array(
 
               'skolelogin'   => array('link'=>'auth_radius_link','file'=>'auth_radius_login' ),
 
-              'sms-login'   => array('link'=>'auth_sms_link','file'=>'auth_sms_login' ),
+              'sms-login'   => array('link'=>'auth_sms_link','file'=>'auth_sms_login', 'sms' => 1 ),
 
-              'sms-send-code'   => array(),
-              'en_sms-send-code'   => array(),
+              'sms-send-code'   => array('file'=>'auth_sms_login', 'sms' => 2  ),
 
               'logged-in' => array('link'=>'-','file'=>'host_active' ),
   );
@@ -94,10 +93,25 @@ function extract_headers(&$content, &$headers){
 // find language
 $language = $_COOKIE["tidyLanguage"] === 'en' ? 'en' : 'da';
 
+// handle login/post with json response - url contains '='
+if ( isset($_SERVER["REDIRECT_URL"]) && preg_match("/\=/", $_SERVER["REDIRECT_URL"])   ){
+
+    header('Content-type:application/json');
+    if( $_REQUEST['username'] == '0000') {
+        header('HTTP/1.0 200 Found');
+        echo '{"status":"0","site_id":"23","authenticated":1,"username":"...","host":"...","redirect":"/logged-in.php","method":"...","expire":"7200"}';
+    } else {
+        header('HTTP/1.0 400 Bad Request');
+        echo '{"status":"validation failed","site_id":"23","method":"ads","authenticated":0,"expire":0,"message":"Forkert brugernavn eller adgangskode.","host":"..."}';
+    }
+    exit;
+}
+
 // find filename
 $filename = isset($_SERVER["REDIRECT_URL"]) ? $_SERVER["REDIRECT_URL"] : 'index.php';
 $filename = preg_replace('~^/~', '', $filename);
 $filename = preg_replace('/\.php/i', '', $filename);
+
 
 // get the right file
 $localfile = $mapping[$filename]['file'] . '_' . $language . '.txt';
@@ -107,7 +121,7 @@ $content = load_file($localfile);
 // start parsing
 handle_include($content);
 
-$reverse_mapping['form_action']='/logged-in.php';
+$reverse_mapping['form_action']='/auth/=/logon/';
 $reverse_mapping['form_intercept']='';
 
 // handle footer link
@@ -115,9 +129,20 @@ $content = preg_replace('/\%TIDY_REGEX\[language_modules.*?\]/', '', $content);
 $reverse_mapping['language_en_js']='javascript:set_language(&#39;en&#39;); void(0);';
 $reverse_mapping['language_da_js']='javascript:set_language(&#39;da&#39;); void(0);';
 
-// remove sms
-$reverse_mapping['sms_form']='';
-$reverse_mapping['sms_notice']='';
+// handle sms
+if ( isset($mapping[$filename]['sms'])){
+
+  $reverse_mapping['sms_form']='';
+  $reverse_mapping['sms_notice']='';
+  
+  if ( $mapping[$filename]['sms'] == 1 ) {
+    $content = preg_replace('/^\%TIDY_IFDEF\[sms_sent\].*/m','', $content);
+    $reverse_mapping['form_action']='/sms-send-code.php';
+  } else if ( $mapping[$filename]['sms'] == 2 ) {
+    $content = preg_replace('/^\%TIDY_IFDEF\[\!sms_sent\].*/m','', $content);
+    $reverse_mapping['sms_number']='12345678';   
+  }
+}
 
 // handle link
 handle_link($content, $reverse_mapping);
