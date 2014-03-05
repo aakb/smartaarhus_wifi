@@ -1,0 +1,25 @@
+%TIDY_DEP[debug] <!-- $Id: auth_ads_login_en.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Employee login<span class="saved-login--link js-save-login-choice js-login-choice">(<a href="#">Remember my choice</a>)</span><span class="saved-login--link js-delete-login-choice">(<a href="#">Forget my choice</a>)</span></h1>
+  <div class="js-message"></div>  
+  <div class="js-save-login-message"></div>
+  <div class="form--wrapper">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
+      <label for="username">AZ-ident</label>
+      <input type="text" placeholder="Enter AZ-ident" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      <div class="form--password-wrapper">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" id="password" name="password" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <input type="submit" class="button" value="Log ind" />
+    </form>
+  </div>
+  %TIDY[include(footer_en.txt)]
+</div>
+

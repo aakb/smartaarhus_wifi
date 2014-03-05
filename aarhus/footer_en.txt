@@ -1,0 +1,6 @@
+%TIDY_DEP[debug] <!-- $Id: footer_en.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+<footer class="footer">
+%TIDY_REGEX[language_modules,/da/]    <a href="%TIDY[language_da_js]" title="se dansk version" class="footer--language">Dansk</a>
+</footer>

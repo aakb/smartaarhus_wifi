@@ -1,0 +1,13 @@
+%TIDY_DEP[debug] <!-- $Id: header_meta.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY_PAGEHEAD: <meta charset="utf-8"/>
+%TIDY_PAGEHEAD: <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+%TIDY_PAGEHEAD: <meta name="viewport" content="width=device-width"/>
+%TIDY_PAGEHEAD: <link rel="stylesheet" href="/public/styles.css"/>
+%TIDY_PAGEHEAD: <script type="text/javascript" src="/public/jquery-1.11.0.min.js"></script>
+%TIDY_PAGEHEAD: <script type="text/javascript" src="/public/hide-password.min.js"></script>
+%TIDY_PAGEHEAD: <script type="text/javascript" src="/public/jquery.cookie.js"></script>
+%TIDY_PAGEHEAD: <script type="text/javascript" src="/public/jquery.h5validate.js"></script>
+%TIDY_PAGEHEAD: <script type="text/javascript" src="/public/html5shiv.js"></script>
+%TIDY_PAGEHEAD: <script type="text/javascript" src="/public/scripts.js"></script>

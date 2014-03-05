@@ -1,0 +1,27 @@
+%TIDY_DEP[debug] <!-- $Id: auth_nwa_login_en.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Guest login</h1>
+  <div class="js-message"></div>
+  <p class="page-content">Guest login can be obtained at the counter / reception.</p>
+  <div class="form--wrapper">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
+      <div class="form--password-wrapper">
+        <label for="username">Username</label>
+        <input type="password" placeholder="Enter username" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <div class="form--password-wrapper">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" id="password" name="password" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <input type="submit" class="button" value="Log ind" />
+    </form>
+  </div>
+  %TIDY[include(footer_en.txt)]
+</div>
+
