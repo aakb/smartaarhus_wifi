@@ -6,8 +6,6 @@ $mapping  = array(
 
               'index'   => array('link'=>'auth_home_link','file'=>'auth_methods'),
 
-              'logged-in'   => array('file'=>'host_active' ),
-
               'error'   => array('file'=>'error' ),
 
               'bibliotekslogin'   => array('link'=>'auth_axiell_link','file'=>'auth_axiell_login' ),
@@ -24,7 +22,7 @@ $mapping  = array(
 
               'sms-send-code'   => array('file'=>'auth_sms_login', 'sms' => 2  ),
 
-              'logged-in' => array('link'=>'-','file'=>'host_active' ),
+              'logged-in' => array('file'=>'host_active' ),
   );
 
 
