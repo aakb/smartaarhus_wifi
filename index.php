@@ -25,7 +25,9 @@ $mapping  = array(
               'logged-in' => array('file'=>'host_active' ),
   );
 
-
+$correct_username = '0000';
+  
+  
 $reverse_mapping = array();
 foreach ($mapping as $key => $value) {
     if (  isset($value['link'])   ) {
@@ -33,8 +35,8 @@ foreach ($mapping as $key => $value) {
     }
 }
 
-function remove_tidy_debug(&$content) {
-  $content = preg_replace('/^\%TIDY_DEP\[debug\].+/m','', $content);
+function remove_tidy_dep(&$content) {
+  $content = preg_replace('/^\%TIDY_DEP\[.*?\]\s*/m','', $content);
 }
 
 function load_file($file) {
@@ -42,7 +44,7 @@ function load_file($file) {
 
   $content = file_get_contents( $sub_directory . $file);
 
-  remove_tidy_debug($content);
+  remove_tidy_dep($content);
 
   return $content;
 }
@@ -60,7 +62,8 @@ function handle_include(&$content) {
 function handle_link(&$content, $links) {
 
   // fjern alle %TIDY_IFDEF[auth_axiell_link]
-  $content = preg_replace('/^\%TIDY_IFDEF\[.*?\]/m','', $content);
+  //$content = preg_replace('/^\%TIDY_IFDEF\[.*?\]/m','', $content);
+  $content = preg_replace('/\%TIDY_IFDEF\[.*?\]/m','', $content);
 
   // erstat link hvis link findes
   $content = preg_replace_callback(
@@ -95,7 +98,7 @@ $language = $_COOKIE["tidyLanguage"] === 'en' ? 'en' : 'da';
 if ( isset($_SERVER["REDIRECT_URL"]) && preg_match("/\=/", $_SERVER["REDIRECT_URL"])   ){
 
     header('Content-type:application/json');
-    if( $_REQUEST['username'] == '0000') {
+    if( $_REQUEST['username'] == $correct_username) {
         header('HTTP/1.0 200 Found');
         echo '{"status":"0","site_id":"23","authenticated":1,"username":"...","host":"...","redirect":"/logged-in.php","method":"...","expire":"7200"}';
     } else {
@@ -121,6 +124,14 @@ handle_include($content);
 
 $reverse_mapping['form_action']='/auth/=/logon/';
 $reverse_mapping['form_intercept']='';
+$reverse_mapping['redirect']='';
+
+$reverse_mapping['intercept_uri']='http://www.aakb.dk';
+$reverse_mapping['intercept_uri_nice']='http://www.aakb.dk';
+
+$reverse_mapping['expire_time']='Onsdag kl. 17';
+
+
 
 // handle footer link
 $content = preg_replace('/\%TIDY_REGEX\[language_modules.*?\]/', '', $content);
@@ -138,6 +149,7 @@ if ( isset($mapping[$filename]['sms'])){
     $reverse_mapping['form_action']='/sms-send-code.php';
   } else if ( $mapping[$filename]['sms'] == 2 ) {
     $content = preg_replace('/^\%TIDY_IFDEF\[\!sms_sent\].*/m','', $content);
+    $reverse_mapping['form_action']='/logged-in.php';    
     $reverse_mapping['sms_number']='12345678';   
   }
 }
@@ -160,5 +172,5 @@ extract_headers($content, $headers);
 <div class="main_wrapper">
     <?php echo $content; ?>
 </div>
-<div>demomode</div>
+<div>Demo: Brug <?php echo $correct_username;?> som testbrugernavn.</div>
 </body></html>
