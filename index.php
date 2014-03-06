@@ -115,6 +115,7 @@ if ( isset($_SERVER["REDIRECT_URL"]) && preg_match("/\=/", $_SERVER["REDIRECT_UR
   header('Content-type:application/json');
   if( in_array($_REQUEST['username'], $usernames)) {
     header('HTTP/1.0 200 Found');
+    sleep(2); // simulate slow server
     echo '{"status":"0","authenticated":1,"redirect":"' . $link_mapping[$loggedIndex] . '"}';
   } else {
     header('HTTP/1.0 400 Bad Request');
