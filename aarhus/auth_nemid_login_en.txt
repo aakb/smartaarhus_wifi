@@ -1,0 +1,20 @@
+%TIDY_DEP[debug] <!-- $Id: auth_nemid_login_en.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+%TIDY[nemid_javascript]
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Nemid</h1>
+
+  <div class="form--wrapper">
+        <form name="logonForm" action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
+%TIDY[form_intercept]
+%TIDY[nemid_form]
+%TIDY[nemid_applet]
+  	</form>
+  </div>
+  %TIDY[include(footer_en.txt)]
+</div>
+

@@ -1,0 +1,27 @@
+%TIDY_DEP[debug] <!-- $Id: auth_nwa_login_da.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>G&aelig;stelogin</h1>
+  <div class="js-message"></div>
+  <p class="page-content">Gæstelogin udleveres ved skranken/receptionen.</p>    
+  <div class="form--wrapper">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
+      <div class="form--password-wrapper">
+        <label for="username">Brugernavn</label>
+        <input type="password" placeholder="Indtast dit udleverede brugernavn" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <div class="form--password-wrapper">
+        <label for="password">Kode</label>
+        <input type="password" placeholder="Indtast din kode" id="password" name="password" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <input type="submit" class="button" value="Log ind" />
+    </form>
+  </div>
+  %TIDY[include(footer_da.txt)]
+</div>
+

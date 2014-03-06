@@ -1,0 +1,26 @@
+%TIDY_DEP[debug] <!-- $Id: auth_axiell_login_en.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Library login</h1>
+  <div class="js-message"></div>  
+  <div class="form--wrapper">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
+      <div class="form--password-wrapper">
+        <label for="username">Borrower ID / CPR number</label>
+        <input type="password" placeholder="Enter your borrower ID or CPR number" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <div class="form--password-wrapper">
+        <label for="password">Pincode</label>
+        <input type="password" placeholder="Enter your pincode" id="password" name="password" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <input type="submit" class="button" value="Log ind" />
+    </form>
+  </div>
+  %TIDY[include(footer_en.txt)]
+</div>
+

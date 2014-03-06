@@ -1,0 +1,22 @@
+%TIDY_DEP[debug] <!-- $Id: error_da.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Fejl</h1>
+  <div class="page-content">
+  
+      <p class="error">%TIDY[error_message]&nbsp;</p>
+      <div class="form-wrapper">
+        <div class="form-item submit">
+          <input type="button" value="Tilbage" id="submit" onclick="javascript:history.back(1);" />
+        </div>
+      </div>    
+    
+  </div>
+  %TIDY[include(footer_da.txt)]
+</div>
+

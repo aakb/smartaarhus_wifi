@@ -1,0 +1,26 @@
+%TIDY_DEP[debug] <!-- $Id: auth_axiell_login_da.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>Bibliotekslogin</h1>
+  <div class="js-message"></div>  
+  <div class="form--wrapper">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]
+      <div class="form--password-wrapper">
+        <label for="username">Lånerkortnummer / CPR-nummer</label>
+        <input type="password" placeholder="Indtast dit lånerkort- eller CPR-nummer" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <div class="form--password-wrapper">
+        <label for="password">Pinkode</label>
+        <input type="password" placeholder="Indtast din pinkode" id="password" name="password" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+      </div>
+      <input type="submit" class="button" value="Log ind" />
+    </form>
+  </div>
+  %TIDY[include(footer_da.txt)]
+</div>
+

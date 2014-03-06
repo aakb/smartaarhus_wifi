@@ -1,0 +1,33 @@
+%TIDY_DEP[debug] <!-- $Id: auth_sms_login_da.txt $ -->
+%TIDY_DEP[debug] <!-- Template version 2.4.21 -->
+
+%TIDY[include(header_meta.txt)]
+
+
+%TIDY[include(header_top.txt)]
+<div class="layout">
+  <h1>SMS login</h1>
+
+%TIDY_IFDEF[sms_notice]  <p class="error">%TIDY[sms_notice]&nbsp;</p>
+
+  <p class="page-content">Indtast dit mobilnummer og du vil herefter modtage en SMS, der indeholder en engangskode.</p>
+  <div class="form--wrapper">
+    <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]%TIDY[sms_form]
+
+%TIDY_IFDEF[!sms_sent]<label for="username">Mobilnummer</label>
+%TIDY_IFDEF[!sms_sent]<input type="number" placeholder="Indtast dit mobilnummer" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+%TIDY_IFDEF[!sms_sent]<input type="submit" class="button" value="Send SMS">
+
+%TIDY_IFDEF[sms_sent]<label for="username">Mobilnummer</label>    
+%TIDY_IFDEF[sms_sent]<input type="text" value="%TIDY[sms_number]" disabled="disabled" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+%TIDY_IFDEF[sms_sent]<div class="form--password-wrapper">
+%TIDY_IFDEF[sms_sent]<label for="password">Indtast kode</label>
+%TIDY_IFDEF[sms_sent]<input type="password" placeholder="Indtast kode fra SMS" id="password" autofocus name="password" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+%TIDY_IFDEF[sms_sent]</div>
+%TIDY_IFDEF[sms_sent]<input type="submit" class="button" value="Log ind">
+
+</form>
+  </div>
+  %TIDY[include(footer_da.txt)]
+</div>
+
