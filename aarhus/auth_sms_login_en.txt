@@ -15,7 +15,7 @@
     <form action="%TIDY[form_action]" method="post">%TIDY[form_intercept]%TIDY[sms_form]
 
 %TIDY_IFDEF[!sms_sent]<label for="username">Mobile number (e.g. +45 12345678)</label>
-%TIDY_IFDEF[!sms_sent]<input type="number" placeholder="Mobile number incl. country code (e.g. +45 12345678)" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+%TIDY_IFDEF[!sms_sent]<input type="text" placeholder="Mobile number incl. country code (e.g. +45 12345678)" id="username" autofocus name="username" class="form--input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required>
 %TIDY_IFDEF[!sms_sent]<input type="submit" class="button" value="Send SMS" />
 
 %TIDY_IFDEF[sms_sent]<label for="username">Mobile number</label>
