@@ -8,7 +8,7 @@
 <div class="layout">
   <h1>SMS login</h1>
 
-%TIDY_IFDEF[sms_notice]  <p class="error">%TIDY[sms_notice]&nbsp;</p>
+%TIDY_IFDEF[sms_notice]  <p class="error">%TIDY[sms_notice]</p>
 
   <p class="page-content">Enter your mobile number and you will receive a text message containing a one-time code.</p>
   <div class="form--wrapper">

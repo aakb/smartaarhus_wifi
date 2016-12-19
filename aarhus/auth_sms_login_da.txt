@@ -8,7 +8,7 @@
 <div class="layout">
   <h1>SMS login</h1>
 
-%TIDY_IFDEF[sms_notice]  <p class="error">%TIDY[sms_notice]&nbsp;</p>
+%TIDY_IFDEF[sms_notice]<p class="error">%TIDY[sms_notice]</p>
 
   <p class="page-content">Indtast dit mobilnummer og du vil herefter modtage en SMS, der indeholder en engangskode.</p>
   <div class="form--wrapper">
