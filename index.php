@@ -170,8 +170,9 @@ extract_headers($content, $headers);
     <script type="text/javascript">function set_language(lang) { document.cookie = "tidyLanguage" + "=" + escape(lang) + "; path=/"; window.location.reload(true); } </script>
     <?php echo $headers; ?>
 </head>
-<body class="aarhus">
-<div class="main_wrapper">
-    <?php echo $content; ?>
-</div>
-</body></html>
+  <body class="aarhus">
+  <div class="main_wrapper">
+      <?php echo $content; ?>
+  </div>
+  </body>
+</html>

@@ -9,7 +9,7 @@
 %center-layout-container {
   margin-right: auto;
   margin-left: auto;
-  max-width: 45em;
+  max-width: 40em;
 }
 
 
@@ -45,7 +45,7 @@
     max-width: 100%;
   }
 
-  .logo-aak--wrapper {
+  .logo-secondary--wrapper {
     right: 2em;
   }
 
@@ -65,12 +65,11 @@
 /* Header */
 
 .header {
-  height: 3em;
+  height: 2em;
   margin-bottom: 2em;
+  padding-top: 2em;
   padding-right: 1em;
   padding-left: 1em;
-
-  background-color: $orange;
 
   a {
     &:link {
@@ -79,11 +78,11 @@
     }
 
     &:visited {
-      color: darken($orange, 5%);
+      color: darken($white, 5%);
     }
 
     &:hover {
-      color: darken($orange, 10%);
+      color: darken($white, 10%);
       text-decoration: none;
     }
 
@@ -95,10 +94,8 @@
 
 .header--inner {
   @extend %center-layout-container;
-
   position: relative;
 }
-
 
 /* Logos and back link */
 
@@ -114,23 +111,27 @@
 
 .back-link--wrapper,
 .logo--wrapper,
-.logo-aak--wrapper {
+.logo-secondary--wrapper {
   position: absolute;
 
-  height: 3em;
+  height: 2em;
+}
+
+.back-link--wrapper {
+  left: 0;
 }
 
 .logo--wrapper {
   left: 2em;
 }
 
-.logo-aak--wrapper {
+.logo-secondary--wrapper {
   right: 0;
 }
 
 .back-link,
 .logo,
-.logo-aak {
+.logo-secondary {
   @include vertical-align();
 }
 
@@ -139,8 +140,12 @@
   max-width: 10em;
 }
 
-.logo-aak {
-  max-width: 4em;
+.logo-secondary {
+  max-width: 10em;
+
+  @include breakpoint($breakpoint-desk) {
+    max-width: 12em;
+  }
 }
 
 
@@ -166,9 +171,11 @@
 .layout {
   @extend %center-layout-container;
 
+  background-color: $primary-color-dark;
   padding-right: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
   padding-left: 2em;
+  padding-top: 2em;
 }
 
 
@@ -192,13 +199,7 @@
   }
 }
 
-
 /* Footer */
-
 .footer {
-  text-align: center;
-}
-
-.footer--language {
-  margin-left: 1em;
+  font-size: 1.2em;
 }

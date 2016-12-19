@@ -4,7 +4,6 @@
  *
  */
 /* Compass */
-/* Zen Grids - http://zengrids.com */
 /**
  *
  * Theme variables
@@ -45,50 +44,44 @@
 .button, .button-small, .link-button {
   display: inline-block;
   font-size: 125%;
+  margin-top: 0.5em;
   padding: .65em 1.5em;
   position: relative;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  -webkit-border-radius: 0.6em;
-  -moz-border-radius: 0.6em;
-  -ms-border-radius: 0.6em;
-  -o-border-radius: 0.6em;
-  border-radius: 0.6em;
-  text-shadow: 0 0.025em 0 #266eb2;
 }
-/* line 20, ../sass/theme/_buttons.scss */
+/* line 19, ../sass/theme/_buttons.scss */
 .button:focus, .button-small:focus, .link-button:focus, .button:hover, .button-small:hover, .link-button:hover, .button:active, .button-small:active, .link-button:active {
   text-decoration: none;
 }
 
-/* line 28, ../sass/theme/_buttons.scss */
+/* line 26, ../sass/theme/_buttons.scss */
 .button, .button-small, .link-button {
-  background-color: #3788d4;
+  background-color: #EC0089;
   border: 0;
-  color: white;
+  color: #fff;
   width: 100%;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 39, ../sass/theme/_buttons.scss */
+/* line 37, ../sass/theme/_buttons.scss */
 .button:hover, .button-small:hover, .link-button:hover {
-  background-color: #2b7bc7;
-  color: white;
+  background-color: #d3007a;
+  color: #fff;
 }
-/* line 44, ../sass/theme/_buttons.scss */
+/* line 42, ../sass/theme/_buttons.scss */
 .button[disabled], [disabled].button-small, [disabled].link-button {
-  background-color: #aaaaaa;
-  text-shadow: 0 0.025em 0 #666666;
+  background-color: #aaa;
 }
 
-/* line 51, ../sass/theme/_buttons.scss */
+/* line 47, ../sass/theme/_buttons.scss */
 .button-small {
   width: 50%;
 }
 @media only screen and (min-width: 45em) {
-  /* line 51, ../sass/theme/_buttons.scss */
+  /* line 47, ../sass/theme/_buttons.scss */
   .button-small {
     width: 35%;
   }
@@ -104,7 +97,7 @@
 .header--inner, .layout {
   margin-right: auto;
   margin-left: auto;
-  max-width: 45em;
+  max-width: 40em;
 }
 
 /* Map */
@@ -116,8 +109,8 @@
 .map body {
   height: 100%;
   padding-top: 3em;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 27, ../sass/theme/_layout.scss */
@@ -141,7 +134,7 @@
   max-width: 100%;
 }
 /* line 48, ../sass/theme/_layout.scss */
-.map .logo-aak--wrapper {
+.map .logo-secondary--wrapper {
   right: 2em;
 }
 /* line 52, ../sass/theme/_layout.scss */
@@ -151,133 +144,145 @@
   top: 6em;
   left: 7em;
   padding: 1em;
-  background-color: white;
+  background-color: #fff;
 }
 
 /* Header */
 /* line 67, ../sass/theme/_layout.scss */
 .header {
-  height: 3em;
+  height: 2em;
   margin-bottom: 2em;
+  padding-top: 2em;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #f89100;
 }
-/* line 76, ../sass/theme/_layout.scss */
+/* line 75, ../sass/theme/_layout.scss */
 .header a:link {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
-/* line 81, ../sass/theme/_layout.scss */
+/* line 80, ../sass/theme/_layout.scss */
 .header a:visited {
-  color: #df8200;
+  color: #f2f2f2;
 }
-/* line 85, ../sass/theme/_layout.scss */
+/* line 84, ../sass/theme/_layout.scss */
 .header a:hover {
-  color: #c57300;
+  color: #e6e6e6;
   text-decoration: none;
 }
-/* line 90, ../sass/theme/_layout.scss */
+/* line 89, ../sass/theme/_layout.scss */
 .header a:focus {
   color: #e6e6e6;
 }
 
-/* line 96, ../sass/theme/_layout.scss */
+/* line 95, ../sass/theme/_layout.scss */
 .header--inner {
   position: relative;
 }
 
 /* Logos and back link */
-/* line 106, ../sass/theme/_layout.scss */
+/* line 103, ../sass/theme/_layout.scss */
 .front .logo--wrapper {
   left: 0;
 }
-/* line 110, ../sass/theme/_layout.scss */
+/* line 107, ../sass/theme/_layout.scss */
 .front .back-link--wrapper {
   display: none;
 }
 
-/* line 117, ../sass/theme/_layout.scss */
+/* line 112, ../sass/theme/_layout.scss */
 .back-link--wrapper,
 .logo--wrapper,
-.logo-aak--wrapper {
+.logo-secondary--wrapper {
   position: absolute;
-  height: 3em;
+  height: 2em;
 }
 
-/* line 123, ../sass/theme/_layout.scss */
+/* line 120, ../sass/theme/_layout.scss */
+.back-link--wrapper {
+  left: 0;
+}
+
+/* line 124, ../sass/theme/_layout.scss */
 .logo--wrapper {
   left: 2em;
 }
 
-/* line 127, ../sass/theme/_layout.scss */
-.logo-aak--wrapper {
+/* line 128, ../sass/theme/_layout.scss */
+.logo-secondary--wrapper {
   right: 0;
 }
 
-/* line 133, ../sass/theme/_layout.scss */
+/* line 132, ../sass/theme/_layout.scss */
 .back-link,
 .logo,
-.logo-aak {
+.logo-secondary {
   position: relative;
   top: 50%;
   vertical-align: baseline;
-  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-/* line 137, ../sass/theme/_layout.scss */
+/* line 138, ../sass/theme/_layout.scss */
 .logo {
   display: inline-block;
   max-width: 10em;
 }
 
-/* line 142, ../sass/theme/_layout.scss */
-.logo-aak {
-  max-width: 4em;
+/* line 143, ../sass/theme/_layout.scss */
+.logo-secondary {
+  max-width: 10em;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 143, ../sass/theme/_layout.scss */
+  .logo-secondary {
+    max-width: 12em;
+  }
 }
 
-/* line 147, ../sass/theme/_layout.scss */
+/* line 152, ../sass/theme/_layout.scss */
 .back-link {
   display: block;
   max-width: 1em;
 }
 
-/* line 154, ../sass/theme/_layout.scss */
+/* line 159, ../sass/theme/_layout.scss */
 .frontpage .back-link,
 .back-link-hidden .back-link {
   display: none;
 }
-/* line 158, ../sass/theme/_layout.scss */
+/* line 163, ../sass/theme/_layout.scss */
 .frontpage .logo--wrapper,
 .back-link-hidden .logo--wrapper {
   left: 0;
 }
 
 /* Layout */
-/* line 166, ../sass/theme/_layout.scss */
+/* line 171, ../sass/theme/_layout.scss */
 .layout {
+  background-color: #0F357B;
   padding-right: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
   padding-left: 2em;
+  padding-top: 2em;
 }
 
 /* Saved login */
-/* line 177, ../sass/theme/_layout.scss */
+/* line 184, ../sass/theme/_layout.scss */
 .saved-login--link {
   display: none;
   font-size: .5em;
 }
-/* line 182, ../sass/theme/_layout.scss */
+/* line 189, ../sass/theme/_layout.scss */
 .saved-login--link.is-visible {
   display: inline-block;
   min-width: 7.5em;
 }
 @media only screen and (min-width: 24em) {
-  /* line 177, ../sass/theme/_layout.scss */
+  /* line 184, ../sass/theme/_layout.scss */
   .saved-login--link {
     position: absolute;
     margin-top: .75em;
@@ -286,14 +291,9 @@
 }
 
 /* Footer */
-/* line 198, ../sass/theme/_layout.scss */
+/* line 203, ../sass/theme/_layout.scss */
 .footer {
-  text-align: center;
-}
-
-/* line 202, ../sass/theme/_layout.scss */
-.footer--language {
-  margin-left: 1em;
+  font-size: 1.2em;
 }
 
 /**
@@ -302,33 +302,28 @@
  *
  */
 /* line 8, ../sass/theme/_link-button.scss */
-.link-button--wrapper {
-  margin-bottom: 2em;
-}
-
-/* line 13, ../sass/theme/_link-button.scss */
 .link-button {
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: .8em;
   text-align: left;
 }
-/* line 23, ../sass/theme/_link-button.scss */
+/* line 17, ../sass/theme/_link-button.scss */
 .link-button:link, .link-button:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
-/* line 28, ../sass/theme/_link-button.scss */
+/* line 23, ../sass/theme/_link-button.scss */
 .link-button:hover {
-  background-color: #2b7bc7;
-  color: white;
+  background-color: #d3007a;
+  color: #fff;
   text-decoration: none;
 }
-/* line 34, ../sass/theme/_link-button.scss */
+/* line 29, ../sass/theme/_link-button.scss */
 .link-button:focus {
-  color: white;
+  color: #fff;
 }
 
-/* line 39, ../sass/theme/_link-button.scss */
+/* line 34, ../sass/theme/_link-button.scss */
 .link-button--icon-wrapper {
   position: absolute;
   top: 0;
@@ -337,15 +332,10 @@
   display: block;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #266eb2;
-  -webkit-border-radius: 0 0.6em 0.6em 0;
-  -moz-border-radius: 0 0.6em 0.6em 0;
-  -ms-border-radius: 0 0.6em 0.6em 0;
-  -o-border-radius: 0 0.6em 0.6em 0;
-  border-radius: 0 0.6em 0.6em 0;
+  background-color: #b9006b;
 }
 
-/* line 54, ../sass/theme/_link-button.scss */
+/* line 47, ../sass/theme/_link-button.scss */
 .link-button--icon {
   position: relative;
   top: .5em;
@@ -383,23 +373,18 @@
   min-height: 3.5em;
   padding-right: 1em;
   padding-left: 2.75em;
-  background: white url("/public/eye.png") no-repeat 0.5em 1.25em;
-  color: #999999;
+  background: #fff url("/public/eye.png") no-repeat 0.5em 1.25em;
+  color: #999;
   cursor: pointer;
   font-size: 75%;
   line-height: 3.5em;
-  -webkit-background-size: 1.5em;
   -moz-background-size: 1.5em;
   -o-background-size: 1.5em;
+  -webkit-background-size: 1.5em;
   background-size: 1.5em;
-  -webkit-border-radius: 0 0.75em 0.75em 0;
-  -moz-border-radius: 0 0.75em 0.75em 0;
-  -ms-border-radius: 0 0.75em 0.75em 0;
-  -o-border-radius: 0 0.75em 0.75em 0;
-  border-radius: 0 0.75em 0.75em 0;
 }
 
-/* line 47, ../sass/theme/_forms.scss */
+/* line 46, ../sass/theme/_forms.scss */
 .form--new-code {
   padding-top: 2em;
   text-align: center;
@@ -412,60 +397,62 @@
  */
 /* line 8, ../sass/theme/_messages.scss */
 .message--success {
-  background-color: #b9ff73;
-  color: #3a7300;
+  background-color: #76b83f;
+  color: black;
 }
 
 /* line 13, ../sass/theme/_messages.scss */
 .message--error {
-  background-color: #ff6138;
-  color: white;
+  background-color: #d0232a;
+  color: #fff;
 }
 /* line 17, ../sass/theme/_messages.scss */
 .message--error a:link {
-  color: #ffdad1;
+  color: #ef9da1;
   text-decoration: underline;
 }
 /* line 22, ../sass/theme/_messages.scss */
 .message--error a:visited {
-  color: #ffefeb;
+  color: #f2b3b6;
 }
-/* line 27, ../sass/theme/_messages.scss */
+/* line 26, ../sass/theme/_messages.scss */
 .message--error a:hover,
 .message--error a:focus {
-  color: white;
+  color: #f6c9cb;
   text-decoration: none;
 }
 
 /* line 33, ../sass/theme/_messages.scss */
 .message--warning {
-  background-color: #f8b634;
-  color: #5d3f03;
+  background-color: #fbad17;
+  color: #452e01;
 }
 
 /* line 38, ../sass/theme/_messages.scss */
-.message, .message--success, .message--warning, .message--error {
+.message--forward {
+  background-color: #0c2b64;
+  color: #fff;
+}
+
+/* line 43, ../sass/theme/_messages.scss */
+.message, .message--success, .message--warning, .message--error, .message--forward {
   overflow: hidden;
-  margin-bottom: 2em;
+  color: #fff;
+  margin-bottom: 1.5em;
   padding: 1em 1.5em;
   width: 100%;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-border-radius: 0.6em;
-  -moz-border-radius: 0.6em;
-  -ms-border-radius: 0.6em;
-  -o-border-radius: 0.6em;
-  border-radius: 0.6em;
 }
-/* line 48, ../sass/theme/_messages.scss */
-.message label, .message--success label, .message--warning label, .message--error label {
+/* line 52, ../sass/theme/_messages.scss */
+.message label, .message--success label, .message--warning label, .message--error label, .message--forward label {
   display: inline;
   margin: 0;
   font-weight: bold;
 }
-/* line 55, ../sass/theme/_messages.scss */
-.message p:last-child, .message--success p:last-child, .message--warning p:last-child, .message--error p:last-child {
+/* line 59, ../sass/theme/_messages.scss */
+.message p:last-child, .message--success p:last-child, .message--warning p:last-child, .message--error p:last-child, .message--forward p:last-child {
   margin-bottom: 0;
 }
 
@@ -476,10 +463,9 @@
  */
 /* line 8, ../sass/theme/_page.scss */
 .page-content {
-  border-bottom: 1px dashed #cccccc;
-  padding-bottom: 1.5em;
+  color: #fff;
+  font-size: 1.2em;
   margin-bottom: 1.5em;
-  color: #666666;
 }
 
 /**
@@ -490,7 +476,7 @@
 /* HTML5 display definitions
    ================================================================================================================== */
 /* Correct `block` display not defined in IE 8/9. */
-/* line 25, ../sass/base/_normalize.scss */
+/* line 14, ../sass/base/_normalize.scss */
 article,
 aside,
 details,
@@ -507,7 +493,7 @@ summary {
 }
 
 /* Correct `inline-block` display not defined in IE 8/9. */
-/* line 34, ../sass/base/_normalize.scss */
+/* line 32, ../sass/base/_normalize.scss */
 audio,
 canvas,
 video {
@@ -557,7 +543,7 @@ a:focus {
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers. */
-/* line 86, ../sass/base/_normalize.scss */
+/* line 85, ../sass/base/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -580,7 +566,7 @@ abbr[title] {
 }
 
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-/* line 110, ../sass/base/_normalize.scss */
+/* line 109, ../sass/base/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -608,7 +594,7 @@ mark {
 }
 
 /* Correct fontello family set oddly in Safari 5 and Chrome. */
-/* line 140, ../sass/base/_normalize.scss */
+/* line 137, ../sass/base/_normalize.scss */
 code,
 kbd,
 pre,
@@ -636,7 +622,7 @@ small {
 }
 
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 166, ../sass/base/_normalize.scss */
+/* line 165, ../sass/base/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -700,7 +686,7 @@ legend {
 /* 1. Correct fontello family not being inherited in all browsers. */
 /* 2. Correct fontello size not being inherited in all browsers. */
 /* 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
-/* line 234, ../sass/base/_normalize.scss */
+/* line 231, ../sass/base/_normalize.scss */
 button,
 input,
 select,
@@ -715,7 +701,7 @@ textarea {
 
 /* Address Firefox 4+ setting `line-height` on `input` using `!important` in */
 /* the UA stylesheet. */
-/* line 244, ../sass/base/_normalize.scss */
+/* line 243, ../sass/base/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -725,7 +711,7 @@ input {
 /* All other form control elements do not inherit `text-transform` values. */
 /* Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. */
 /* Correct `select` style inheritance in Firefox 4+ and Opera. */
-/* line 254, ../sass/base/_normalize.scss */
+/* line 253, ../sass/base/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -734,7 +720,7 @@ select {
 /* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. */
 /* 2. Correct inability to style clickable `input` types in iOS. */
 /* 3. Improve usability and consistency of cursor style between image-type `input` and others. */
-/* line 265, ../sass/base/_normalize.scss */
+/* line 262, ../sass/base/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -746,7 +732,7 @@ input[type="submit"] {
 }
 
 /* Re-set default cursor for disabled elements. */
-/* line 273, ../sass/base/_normalize.scss */
+/* line 272, ../sass/base/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -754,7 +740,7 @@ html input[disabled] {
 
 /* 1. Address box sizing set to `content-box` in IE 8/9. */
 /* 2. Remove excess padding in IE 8/9. */
-/* line 281, ../sass/base/_normalize.scss */
+/* line 280, ../sass/base/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -776,14 +762,14 @@ input[type="search"] {
 }
 
 /* Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
-/* line 299, ../sass/base/_normalize.scss */
+/* line 298, ../sass/base/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 306, ../sass/base/_normalize.scss */
+/* line 305, ../sass/base/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -817,9 +803,14 @@ table {
  */
 /* line 9, ../sass/base/_base.scss */
 body {
-  background: white;
-  color: #444444;
-  font: 1em/1.5 Arial, sans-serif;
+  background-image: url("/public/background-tile.png");
+  background-repeat: repeat;
+  background-position: top left;
+  background-color: #154194;
+  color: #fff;
+  font: 1em/1.5 "Source Sans Pro", sans-serif;
+  height: 100vh;
+  text-align: center;
 }
 
 /* line 21, ../sass/base/_base.scss */
@@ -829,73 +820,75 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Nunito', sans-serif;
   margin-top: 0;
-  margin-bottom: 1em;
-  color: #666666;
-  font-family: Arial, sans-serif;
+  margin-bottom: 0.5em;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
   font-size: 175%;
-  font-weight: bold;
+  font-weight: 600;
   /* This fixes huge spaces when a heading wraps onto two lines */
   line-height: 1.2;
   /* Voodoo to enable ligatures and kerning */
   text-rendering: optimizeLegibility;
 }
 
-/* line 41, ../sass/base/_base.scss */
+/* line 42, ../sass/base/_base.scss */
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-bottom: .25em;
+  margin-bottom: .5em;
 }
 
-/* line 46, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 51, ../sass/base/_base.scss */
+/* line 56, ../sass/base/_base.scss */
 em {
   font-style: italic;
 }
-/* line 54, ../sass/base/_base.scss */
+/* line 59, ../sass/base/_base.scss */
 em strong {
   font-weight: bold;
 }
 
 /* Links
    ================================================================================================================== */
-/* line 65, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 a:link {
-  color: #2d84d8;
+  color: #fff;
   text-decoration: underline;
 }
-/* line 70, ../sass/base/_base.scss */
+/* line 75, ../sass/base/_base.scss */
 a:visited {
-  color: #2577c7;
-}
-/* line 74, ../sass/base/_base.scss */
-a:hover {
-  color: #216ab1;
-  text-decoration: none;
+  color: #f2f2f2;
 }
 /* line 79, ../sass/base/_base.scss */
+a:hover {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+/* line 84, ../sass/base/_base.scss */
 a:focus {
-  color: #216ab1;
+  color: #e6e6e6;
 }
 
 /* Paragraph
    ================================================================================================================== */
-/* line 88, ../sass/base/_base.scss */
+/* line 93, ../sass/base/_base.scss */
 p {
   margin-top: 0;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
+  font-size: 1.1em;
 }
 
 /* Image
    ================================================================================================================== */
-/* line 97, ../sass/base/_base.scss */
+/* line 103, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
@@ -911,13 +904,13 @@ img {
  */
 /* Basic styling
    ================================================================================================================== */
-/* line 14, ../sass/base/_forms.scss */
+/* line 13, ../sass/base/_forms.scss */
 input,
 textarea {
-  font: 1em/1.5 Arial, sans-serif;
+  font: 1em/1.5 "Source Sans Pro", sans-serif;
 }
 
-/* line 28, ../sass/base/_forms.scss */
+/* line 18, ../sass/base/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -929,20 +922,15 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   display: block;
   min-height: 1.25em;
   width: 100%;
   padding: .75em;
-  color: #555555;
-  background-color: white;
-  -webkit-border-radius: 0.6em;
-  -moz-border-radius: 0.6em;
-  -ms-border-radius: 0.6em;
-  -o-border-radius: 0.6em;
-  border-radius: 0.6em;
-  -webkit-box-sizing: border-box;
+  color: #555;
+  background-color: #fff;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 38, ../sass/base/_forms.scss */
@@ -957,8 +945,8 @@ input[type="tel"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-  border: 1px solid #666666;
-  color: #444444;
+  border: 1px solid #666;
+  color: #444;
 }
 /* line 44, ../sass/base/_forms.scss */
 input[type="text"][disabled],
@@ -972,20 +960,21 @@ input[type="tel"][disabled],
 input[type="time"][disabled],
 input[type="url"][disabled],
 textarea[disabled] {
-  -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
+  -webkit-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #aaa;
   background-color: #b7b7b7;
 }
 
 /* Labels
    ================================================================================================================== */
-/* line 59, ../sass/base/_forms.scss */
+/* line 58, ../sass/base/_forms.scss */
 label {
   display: block;
   margin-bottom: .25em;
   /* Move labels so they align better with fields when using rounded corners */
   margin-left: .3em;
-  color: #555555;
+  color: #fff;
+  text-align: left;
 }

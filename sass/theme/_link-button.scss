@@ -5,17 +5,12 @@
  */
 
 
-.link-button--wrapper {
-  margin-bottom: 2em;
-}
-
-
 .link-button {
   @extend .button;
 
   position: relative;
 
-  margin-bottom: 1em;
+  margin-bottom: .8em;
 
   text-align: left;
 
@@ -26,7 +21,7 @@
   }
 
   &:hover {
-    background-color: darken($blue, 5%);
+    background-color: darken($secondary-color, 5%);
     color: $white;
     text-decoration: none;
   }
@@ -46,9 +41,7 @@
   padding-right: 1em;
   padding-left: 1em;
 
-  background-color: darken($blue, 10%);
-
-  @include border-radius(0 $border-radius $border-radius 0);
+  background-color: darken($secondary-color, 10%);
 }
 
 .link-button--icon {
