@@ -49,7 +49,6 @@ textarea {
     background-color: lighten($gray-light, 5%);
   }
 
-  @include border-radius($border-radius);
   @include box-sizing(border-box);
 }
 
@@ -63,5 +62,6 @@ label {
   /* Move labels so they align better with fields when using rounded corners */
   margin-left: .3em;
 
-  color: $gray-darker;
+  color: $white;
+  text-align: left;
 }

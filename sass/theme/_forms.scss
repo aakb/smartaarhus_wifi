@@ -41,11 +41,9 @@
   line-height: 3.5em;
 
   @include background-size(1.5em);
-  @include border-radius(0 .75em .75em 0);
 }
 
 .form--new-code {
   padding-top: 2em;
-
   text-align: center;
 }
