@@ -35,15 +35,19 @@
   color: darken($yellow, 40%);
 }
 
+%message-forward {
+  background-color: darken($primary-color-dark, 5%);
+  color: $white;
+}
+
 .message {
   overflow: hidden;
-
-  margin-bottom: 2em;
+  color: $white;
+  margin-bottom: 1.5em;
   padding: 1em 1.5em;
   width: 100%;
 
   @include box-sizing(border-box);
-  @include border-radius($border-radius);
 
   label {
     display: inline;
@@ -72,8 +76,8 @@
   @extend .message;
 }
 
-.message--success {
-  @extend %message-green;
+.message--forward {
+  @extend %message-forward;
   @extend .message;
 }
 
