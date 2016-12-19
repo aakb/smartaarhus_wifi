@@ -9,15 +9,6 @@
 /* Compass */
 @import "compass/css3";
 
-
-
-/* Zen Grids - http://zengrids.com */
-$zen-column-count: 12;
-$zen-gutter-width: 30px;
-
-@import "zen";
-
-
 // Override with theme vars
 @import "theme/_theme-vars";
 @import "theme/_mixins";
