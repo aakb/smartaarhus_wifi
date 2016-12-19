@@ -9,13 +9,18 @@
 /* Colors
    ================================================================================================================== */
 
+// Theme specific
+$primary-color-light: #154194;
+$primary-color-dark:  #0F357B;
+$secondary-color:     #EC0089;
+
+
+// Primary colors
 $black:            #000;
 $white:            #fff;
-$blue:             #3788d4;
-$orange:           #f89100;
-$green:            #b9ff73;
-$yellow:           #f8b634;
-$red:              #ff6138;
+$green:            #76b83f;
+$yellow:           #fbad17;
+$red:              #d0232a;
 
 $gray-lightest:    #eee;
 $gray-lighter:     #ccc;
@@ -30,15 +35,16 @@ $gray-darkest:     #444;
 /* Typograhy
    ================================================================================================================== */
 
-$font-family:      Arial, sans-serif;
-$font:             1em/1.5 $font-family;
+$font-family:           'Source Sans Pro', sans-serif;
+$font-family-headings:  'Nunito', sans-serif;
+$font:                  1em/1.5 $font-family;
 
 
 
 /* Link colors
    ================================================================================================================== */
 
-$link-color:       #2d84d8;
+$link-color:       #fff;
 
 
 

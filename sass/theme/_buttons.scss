@@ -8,6 +8,7 @@
 %button {
   display: inline-block;
   font-size: 125%;
+  margin-top: 0.5em;
   padding: .65em 1.5em;
   position: relative;
 
@@ -20,15 +21,12 @@
   &:active {
     text-decoration: none;
   }
-
-  @include border-radius($border-radius);
-  @include text-shadow(0 .025em 0 darken($blue, 10%));
 }
 
 .button {
   @extend %button;
 
-  background-color: $blue;
+  background-color: $secondary-color;
   border: 0;
   color: $white;
 
@@ -37,14 +35,12 @@
   @include box-sizing(border-box);
 
   &:hover {
-    background-color: darken($blue, 5%);
+    background-color: darken($secondary-color, 5%);
     color: $white;
   }
 
   &[disabled] {
     background-color: $gray-light;
-
-    @include text-shadow(0 .025em 0 $gray-dark);
   }
 }
 
