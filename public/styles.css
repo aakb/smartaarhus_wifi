@@ -265,39 +265,57 @@
 /* line 138, ../sass/theme/_layout.scss */
 .logo {
   display: inline-block;
-  max-width: 10em;
+  max-width: 7em;
+}
+@media only screen and (min-width: 375px) {
+  /* line 138, ../sass/theme/_layout.scss */
+  .logo {
+    max-width: 8.5em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* line 138, ../sass/theme/_layout.scss */
+  .logo {
+    max-width: 12em;
+  }
 }
 
-/* line 143, ../sass/theme/_layout.scss */
+/* line 151, ../sass/theme/_layout.scss */
 .logo-secondary {
-  max-width: 10em;
+  max-width: 8em;
 }
-@media only screen and (min-width: 1024px) {
-  /* line 143, ../sass/theme/_layout.scss */
+@media only screen and (min-width: 375px) {
+  /* line 151, ../sass/theme/_layout.scss */
+  .logo-secondary {
+    max-width: 9em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* line 151, ../sass/theme/_layout.scss */
   .logo-secondary {
     max-width: 12em;
   }
 }
 
-/* line 152, ../sass/theme/_layout.scss */
+/* line 164, ../sass/theme/_layout.scss */
 .back-link {
   display: block;
   max-width: 1em;
 }
 
-/* line 159, ../sass/theme/_layout.scss */
+/* line 171, ../sass/theme/_layout.scss */
 .frontpage .back-link,
 .back-link-hidden .back-link {
   display: none;
 }
-/* line 163, ../sass/theme/_layout.scss */
+/* line 175, ../sass/theme/_layout.scss */
 .frontpage .logo--wrapper,
 .back-link-hidden .logo--wrapper {
   left: 0;
 }
 
 /* Layout */
-/* line 171, ../sass/theme/_layout.scss */
+/* line 183, ../sass/theme/_layout.scss */
 .layout {
   background-color: #0F357B;
   padding-right: 2em;
@@ -307,18 +325,18 @@
 }
 
 /* Saved login */
-/* line 184, ../sass/theme/_layout.scss */
+/* line 196, ../sass/theme/_layout.scss */
 .saved-login--link {
   display: none;
   font-size: .5em;
 }
-/* line 189, ../sass/theme/_layout.scss */
+/* line 201, ../sass/theme/_layout.scss */
 .saved-login--link.is-visible {
   display: inline-block;
   min-width: 7.5em;
 }
 @media only screen and (min-width: 24em) {
-  /* line 184, ../sass/theme/_layout.scss */
+  /* line 196, ../sass/theme/_layout.scss */
   .saved-login--link {
     position: absolute;
     margin-top: .75em;
@@ -327,7 +345,7 @@
 }
 
 /* Footer */
-/* line 203, ../sass/theme/_layout.scss */
+/* line 215, ../sass/theme/_layout.scss */
 .footer {
   font-size: 1.2em;
 }

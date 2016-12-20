@@ -134,7 +134,6 @@ if ( isset($_SERVER["REDIRECT_URL"]) && preg_match('~^/(.*?)\.php~', $_SERVER["R
 
 // get the right file
 $localfile = $mapping[$fileIndex]['file'] . '_' . $language . '.txt';
-
 $content = load_file($localfile);
 
 // handle include-files
