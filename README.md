@@ -1,8 +1,8 @@
 # Smart Aarhus Wifi
 
-The repository uses compass to compile the sass.
+The repository uses Compass(http://compass-style.org/) to compile sass.
 
-Compiling sass and watch for changes
+Compile sass and watch for changes
 ```
 compass watch
 ```
