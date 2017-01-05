@@ -4,7 +4,7 @@
 %TIDY_PAGEHEAD: <meta charset="utf-8"/>
 %TIDY_PAGEHEAD: <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 %TIDY_PAGEHEAD: <meta name="viewport" content="width=device-width"/>
-%TIDY_PAGEHEAD: <link rel="stylesheet" href="/public/styles.css"/>
+%TIDY_PAGEHEAD: <link rel="stylesheet" href="/public/styles-aarhus2017.css"/>
 %TIDY_PAGEHEAD: <script type="text/javascript" src="/public/jquery-1.11.0.min.js"></script>
 %TIDY_PAGEHEAD: <script type="text/javascript" src="/public/hide-password.min.js"></script>
 %TIDY_PAGEHEAD: <script type="text/javascript" src="/public/jquery.cookie.js"></script>
