@@ -4,42 +4,6 @@
  *
  */
 /* Compass */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("/public/Source_Sans_Pro.eot?#iefix") format("embedded-opentype"), url("/public/Source_Sans_Pro.woff") format("woff"), url("/public/Source_Sans_Pro.woff2") format("woff2"), url("/public/Source_Sans_Pro.svg#SourceSansPro") format("svg"), url("/public/Source_Sans_Pro.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url("/public/Source_Sans_Pro_600.eot?#iefix") format("embedded-opentype"), url("/public/Source_Sans_Pro_600.woff") format("woff"), url("/public/Source_Sans_Pro_600.woff2") format("woff2"), url("/public/Source_Sans_Pro_600.svg#SourceSansPro") format("svg"), url("/public/Source_Sans_Pro_600.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("/public/Source_Sans_Pro_700.eot?#iefix") format("embedded-opentype"), url("/public/Source_Sans_Pro_700.woff") format("woff"), url("/public/Source_Sans_Pro_700.woff2") format("woff2"), url("/public/Source_Sans_Pro_700.svg#SourceSansPro") format("svg"), url("/public/Source_Sans_Pro_700.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Nunito Regular"), local("Nunito-Regular"), url("/public/Nunito.eot?#iefix") format("embedded-opentype"), url("/public/Nunito.woff") format("woff"), url("/public/Nunito.woff2") format("woff2"), url("/public/Nunito.svg#Nunito") format("svg"), url("/public/Nunito.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Nunito SemiBold"), local("Nunito-SemiBold"), url("/public/Nunito_600.eot?#iefix") format("embedded-opentype"), url("/public/Nunito_600.woff") format("woff"), url("/public/Nunito_600.woff2") format("woff2"), url("/public/Nunito_600.svg#Nunito") format("svg"), url("/public/Nunito_600.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Nunito Bold"), local("Nunito-Bold"), url("/public/Nunito_700.eot?#iefix") format("embedded-opentype"), url("/public/Nunito_700.woff") format("woff"), url("/public/Nunito_700.woff2") format("woff2"), url("/public/Nunito_700.svg#Nunito") format("svg"), url("/public/Nunito_700.ttf") format("truetype");
-}
 /**
  *
  * Theme variables
@@ -862,7 +826,7 @@ body {
   background-position: top left;
   background-color: #154194;
   color: #fff;
-  font: 1em/1.5 "Source Sans Pro", sans-serif;
+  font: 1em/1.5 Arial, Helvetica, sans-serif;
   height: 100vh;
   text-align: center;
 }
@@ -874,11 +838,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Nunito', sans-serif;
   margin-top: 0;
   margin-bottom: 0.5em;
   color: #fff;
-  font-family: "Nunito", sans-serif;
   font-size: 175%;
   font-weight: 600;
   /* This fixes huge spaces when a heading wraps onto two lines */
@@ -887,7 +849,7 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-/* line 42, ../sass/base/_base.scss */
+/* line 39, ../sass/base/_base.scss */
 h2,
 h3,
 h4,
@@ -896,44 +858,44 @@ h6 {
   margin-bottom: .5em;
 }
 
-/* line 51, ../sass/base/_base.scss */
+/* line 48, ../sass/base/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 56, ../sass/base/_base.scss */
+/* line 53, ../sass/base/_base.scss */
 em {
   font-style: italic;
 }
-/* line 59, ../sass/base/_base.scss */
+/* line 56, ../sass/base/_base.scss */
 em strong {
   font-weight: bold;
 }
 
 /* Links
    ================================================================================================================== */
-/* line 70, ../sass/base/_base.scss */
+/* line 67, ../sass/base/_base.scss */
 a:link {
   color: #fff;
   text-decoration: underline;
 }
-/* line 75, ../sass/base/_base.scss */
+/* line 72, ../sass/base/_base.scss */
 a:visited {
   color: #f2f2f2;
 }
-/* line 79, ../sass/base/_base.scss */
+/* line 76, ../sass/base/_base.scss */
 a:hover {
   color: #e6e6e6;
   text-decoration: none;
 }
-/* line 84, ../sass/base/_base.scss */
+/* line 81, ../sass/base/_base.scss */
 a:focus {
   color: #e6e6e6;
 }
 
 /* Paragraph
    ================================================================================================================== */
-/* line 93, ../sass/base/_base.scss */
+/* line 90, ../sass/base/_base.scss */
 p {
   margin-top: 0;
   margin-bottom: 1.5em;
@@ -942,7 +904,7 @@ p {
 
 /* Image
    ================================================================================================================== */
-/* line 103, ../sass/base/_base.scss */
+/* line 100, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
@@ -961,7 +923,7 @@ img {
 /* line 13, ../sass/base/_forms.scss */
 input,
 textarea {
-  font: 1em/1.5 "Source Sans Pro", sans-serif;
+  font: 1em/1.5 Arial, Helvetica, sans-serif;
 }
 
 /* line 18, ../sass/base/_forms.scss */
