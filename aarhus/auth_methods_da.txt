@@ -8,7 +8,7 @@
   %TIDY[include(header_top.txt)]
   <div class="layout">
     <h1>Log ind</h1>
-    <p class="page-content">Du skal logge ind for at benytte dig af WIFI fra Smart Aarhus.</p>
+    <p class="page-content">Du skal logge ind for at benytte dig af Smart Aarhus netværket.</p>
     <div class="link-button--wrapper">
 %TIDY_IFDEF[auth_axiell_link]  <a href="%TIDY[auth_axiell_link]" class="link-button">Bibliotekslogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
 %TIDY_IFDEF[auth_radius_link]  <a href="%TIDY[auth_radius_link]" class="link-button">Skolelogin<span class="link-button--icon-wrapper"><img src="/public/arrow-right.png" class="link-button--icon" /></span></a>
