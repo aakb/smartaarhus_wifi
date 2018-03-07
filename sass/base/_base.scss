@@ -7,10 +7,10 @@
 
 
 body {
-  background-image: url('/public/background-tile.png');
-  background-repeat: repeat;
-  background-position: top left;
-  background-color: $primary-color-light;
+  background-image: url('/public/background-aarhus-2018.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-color: $primary-color-dark;
   color: $white;
   font: $font;
   height: 100vh;

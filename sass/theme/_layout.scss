@@ -149,14 +149,14 @@
 }
 
 .logo-secondary {
-  max-width: 8em;
+  max-width: 10em;
 
   @include breakpoint($breakpoint-lap) {
-    max-width: 9em;
+    max-width: 18em;
   }
 
   @include breakpoint($breakpoint-tablet) {
-    max-width: 12em;
+    max-width: 22em;
   }
 }
 
